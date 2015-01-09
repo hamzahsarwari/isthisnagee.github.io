@@ -1,0 +1,44 @@
+body{
+    background-color: #1abc9c;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.head{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: block;
+    background-color: #67BCDB;
+
+}
+h1 {
+    font-family: abel;
+    padding: 5px;
+    
+}
+.bod{
+    position: absolute;
+    
+}
+#title {
+    font-family: abel;
+    font-size: 1.5em;
+    padding: 5px;
+    left: 10px;
+}
+
+
+ul
+{
+    position:absolute;
+    bottom:0;
+    right:0;
+    list-style-type: none;
+
+}
+li {
+    font-family: consolas;
+    display: inline;
+}
