@@ -1,5 +1,5 @@
 body{
-    background-color: #1abc9c;
+    background-color: white;
     margin: 0 auto;
     width: 100%;
 
@@ -10,8 +10,8 @@ body{
     top: 0px;
     width: 100%;
     display: block;
-    background-color: #67BCDB;
-
+    background-color: #1abc9c;
+/* #67BCDB */
 }
 h1 {
     font-family: abel;
