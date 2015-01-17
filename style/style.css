@@ -19,9 +19,11 @@ strong{
 
 }
 #head{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
     margin-left: 0px;
     margin-right: 0px;
-    background-color: #7AAEDD;
+    background-color: #0A90F7;
     padding: 20px;
     font-size: 27px;
     font-family: AYTBIT;
@@ -31,43 +33,50 @@ strong{
 
 .main {
     margin: 0;
+    padding: 2em;
     background-color: #white;
 
 }
 
-#left{
+.left{
     position: absolute;
     padding: 5px;
     margin-right: 60%;
     font-family: "andale mono"
 }
-#level1 {
+.level1 {
     border:2px;
     border-style: groove;
     margin-left: 40%;
     background: white;
 }
 
-#level2{
+.level2{
     background: white;
 
 }
 
-#level3 {
+.level3 {
     bottom: 0;
     font-family: "andale mono";
     width:100%;
     text-align: center;
     background:#CCC; 
 	} 
-#layer4{
+.layer4{
     vertical-align: top;
     width:100%;
     display: inline-block;
     background: grey;
 }
 
-
+#lift{
+    margin-bottom: 2em; 
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin-right: 3em;
+}
 
 #bottom 
 {
