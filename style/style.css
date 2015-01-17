@@ -2,19 +2,21 @@
     font-family: AYTBIT;
     src: url(../static/Fonts/8bit_wonder/8-BIT_WONDER.TTF);
 
-* {
-    padding: 0px;
-    margin: 0px;
-}
+
 } 
 
 body {
+    font-family: "andale mono";
     padding: 0;
     background: #FFF;
     
 }
 strong{
     font-size: 13px
+}
+
+#list {
+
 }
 #head{
     margin-left: 0px;
@@ -27,7 +29,8 @@ strong{
     
 }
 
-.main{
+.main {
+    margin: 0;
     background-color: #white;
 
 }
@@ -66,7 +69,7 @@ strong{
 
 
 
-#bottom
+#bottom 
 {
     padding: 10px;
     position:absolute;
