@@ -9,10 +9,11 @@ body {
     font-family: "andale mono";
     padding: 0;
     background: #FFF;
+    height: 100%;
     
 }
 strong{
-    font-size: 13px
+    font-size: .813em
 }
 
 #list {
@@ -21,13 +22,12 @@ strong{
 #head{
     color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     background-color: #0A90F7;
-    padding: 20px;
-    font-size: 27px;
+    padding: 1.250em;
+    font-size: 1.688emx;
     font-family: AYTBIT;
-    line-height: 70%;
     
 }
 
@@ -40,12 +40,12 @@ strong{
 
 .left{
     position: absolute;
-    padding: 5px;
+    padding: .313em;
     margin-right: 60%;
     font-family: "andale mono"
 }
 .level1 {
-    border:2px;
+    border:.125em;
     border-style: groove;
     margin-left: 40%;
     background: white;
@@ -78,9 +78,8 @@ strong{
     margin-right: 3em;
 }
 
-#bottom 
-{
-    padding: 10px;
+#bottom {
+    padding: .62em;
     position:absolute;
     bottom:0;
     right:0;
