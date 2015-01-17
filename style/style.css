@@ -1,37 +1,74 @@
-body{
-    background-color: white;
-    margin: 0 auto;
-    width: 100%;
+@font-face{
+    font-family: AYTBIT;
+    src: url(../static/Fonts/8bit_wonder/8-BIT_WONDER.TTF);
 
+* {
+    padding: 0px;
+    margin: 0px;
 }
+} 
 
-.head{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    display: block;
-    background-color: #1abc9c;
-/* #67BCDB */
-}
-h1 {
-    font-family: abel;
-    padding: 5px;
+body {
+    padding: 0;
+    background: #FFF;
     
 }
-.bod{
-    position: absolute;
+strong{
+    font-size: 13px
+}
+#head{
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #7AAEDD;
+    padding: 20px;
+    font-size: 27px;
+    font-family: AYTBIT;
+    line-height: 70%;
     
 }
-#title {
-    font-family: abel;
-    font-size: 1.5em;
+
+.main{
+    background-color: #white;
+
+}
+
+#left{
+    position: absolute;
     padding: 5px;
-    left: 10px;
+    margin-right: 60%;
+    font-family: "andale mono"
+}
+#level1 {
+    border:2px;
+    border-style: groove;
+    margin-left: 40%;
+    background: white;
+}
+
+#level2{
+    background: white;
+
+}
+
+#level3 {
+    bottom: 0;
+    font-family: "andale mono";
+    width:100%;
+    text-align: center;
+    background:#CCC; 
+	} 
+#layer4{
+    vertical-align: top;
+    width:100%;
+    display: inline-block;
+    background: grey;
 }
 
 
-ul
+
+#bottom
 {
+    padding: 10px;
     position:absolute;
     bottom:0;
     right:0;
@@ -39,6 +76,7 @@ ul
 
 }
 li {
-    font-family: consolas;
+    font-family: "andale mono";
     display: inline;
 }
+
