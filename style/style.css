@@ -2,6 +2,15 @@
     font-family: AYTBIT;
     src: url(../static/Fonts/8bit_wonder/8-BIT_WONDER.TTF);
 
+@media screen and (max-width: 700px) {
+/* applies only if the screen is narrower than 700px */
+    .left{
+        width: 100%;
+        padding: .313em;
+    }
+
+    
+}
 
 } 
 
