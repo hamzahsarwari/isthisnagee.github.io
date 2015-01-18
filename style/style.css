@@ -77,14 +77,13 @@ strong{
 }
 
 #lift{ 
-    margin-left: auto;
-    margin-right: auto;
-    position:relative;
+    height: 3em;
 }
 
 #bottom {
     bottom: 0;
     width: 100%;
+    height: 3em;
     padding: .62em;
     position:sticky;
     list-style-type: none;
