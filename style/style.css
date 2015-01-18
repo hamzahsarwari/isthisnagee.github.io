@@ -6,6 +6,8 @@
 } 
 
 body {
+    align-content: center;
+    margin-top: 100px;
     font-family: "andale mono";
     padding: 0;
     background: #FFF;
@@ -20,6 +22,10 @@ strong{
 
 }
 #head{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
     margin-left: 0;
@@ -32,22 +38,22 @@ strong{
 }
 
 .main {
+    top: 150px;
     margin: 0;
     padding: 2em;
     background-color: #white;
-
 }
 
 .left{
-    position: absolute;
+    float: left;
     padding: .313em;
-    margin-right: 60%;
+    margin-right: 55%;
     font-family: "andale mono"
 }
 .level1 {
     border:.125em;
     border-style: groove;
-    margin-left: 40%;
+    margin-left: 45%;
     background: white;
 }
 
@@ -70,19 +76,17 @@ strong{
     background: grey;
 }
 
-#lift{
-    margin-bottom: 2.55em; 
-    position:absolute;
-    bottom:0;
-    right:0;
-    margin-right: 3em;
+#lift{ 
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
 }
 
 #bottom {
+    bottom: 0;
+    width: 100%;
     padding: .62em;
-    position:absolute;
-    bottom:0;
-    right:0;
+    position:sticky;
     list-style-type: none;
 
 }
