@@ -10,7 +10,7 @@
     
 body {
  background-color: white;
-
+max-width: 960px;
 } 
 .clearfix{
     width: 40%;
