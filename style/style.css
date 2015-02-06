@@ -1,105 +1,111 @@
 @font-face{
     font-family: AYTBIT;
-    src: url(../static/Fonts/8bit_wonder/8-BIT_WONDER.TTF);
+    src: url(../static/Fonts/8bit_wonder/8-BIT_WONDER.TTF);}
 
-@media screen and (max-width: 700px) {
-/* applies only if the screen is narrower than 700px */
-    .left{
-        width: 100%;
-        padding: .313em;
-    }
+@font-face{
+    font-family: REST;
+    src: url(../static/Fonts/Print-Clearly/PrintClearly.otf)
+}
 
     
-}
+body {
+ background-color: white;
 
 } 
-
-body {
-    align-content: center;
-    margin-top: 100px;
-    font-family: "andale mono";
-    padding: 0;
-    background: #FFF;
-    height: 100%;
-    
-}
-strong{
-    font-size: .813em
+.clearfix{
+    width: 40%;
 }
 
-#list {
-
-}
-#head{
-    position: fixed;
+.splash{
     width: 100%;
-    top: 0;
-    left: 0;
-    color: white;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    margin-left: 0;
-    margin-right: 0;
-    background-color: #0A90F7;
-    padding: 1.250em;
-    font-size: 1.688emx;
-    font-family: AYTBIT;
-    
-}
-
-.main {
-    top: 150px;
-    margin: 0;
-    padding: 2em;
-    background-color: #white;
-}
-
-.left{
-    float: left;
-    padding: .313em;
-    margin-right: 55%;
-    font-family: "andale mono"
-}
-.level1 {
-    border:.125em;
-    border-style: groove;
-    margin-left: 45%;
-    background: white;
-}
-
-.level2{
-    background: white;
+    height: 140px;
+    background: #a6e4e7;
+    margin-top: 0px;
 
 }
 
-.level3 {
-    bottom: 0;
-    font-family: "andale mono";
-    width:100%;
+.grid-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    padding-top: 10px;
+    font-family: REST;
+    font-size: 30px;
     text-align: center;
-    background:#CCC; 
-	} 
-.layer4{
-    vertical-align: top;
-    width:100%;
+    
+}
+
+.link {
+    padding: 5px;
+    color: #0099FF;
+    padding-top: 5px;
+    font-family: AYTBIT;
+    text-align: center;
+}
+
+.menu-wrap {
+    width: 50%;
+    background: #a6e4e7;
+}
+#right{
+    float: left;
+    margin-top:1px;
+    height: px;
+    
+}
+.menu {
+    width: 1000px;
+    margin: 0px auto;
+}
+.menu li {
+    margin: 0px;
+    list-style: none;
+    font-family: AYTBIT;
+}
+.menu #name {
+    font-family:REST;
+    font-size: 30px;
+}
+
+.menu a {
+    transition: all linear 0.15s;
+    color: #919191;
+}
+
+.menu li:hover > a, .menu .current-item > a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu .arrow {
+    font-size: 11px;
+    line-height: 0%;
+}
+
+.menu > ul > li {
+    float: center;
     display: inline-block;
-    background: grey;
+    position: relative;
+    font-size: 19px;
 }
 
-#lift{ 
-    height: 3em;
+.menu li:hover .sub-menu {
+    z-index: 1;
+    opacity: 1;
 }
 
-#bottom {
-    bottom: 0;
-    width: 100%;
-    height: 3em;
-    padding: .62em;
-    position:sticky;
-    list-style-type: none;
-
+.sub-menu {
+    width: 160%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity linear 0.15s;
 }
-li {
-    font-family: "andale mono";
-    display: inline;
+
+.sub-menu li {
+    display: block;
 }
 
