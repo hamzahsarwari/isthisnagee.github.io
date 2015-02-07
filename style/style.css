@@ -7,6 +7,20 @@
     src: url(../static/Fonts/Print-Clearly/PrintClearly.otf)
 }
 
+@-webkit-keyframes shake {
+			0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+			10% { -webkit-transform: translate(-1px, -2px) rotate(-2deg); }
+			20% { -webkit-transform: translate(-3px, 0px) rotate(3deg); }
+			30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+			40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+			50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+			60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+			70% { -webkit-transform: translate(2px, 1px) rotate(-2deg); }
+			80% { -webkit-transform: translate(-1px, -1px) rotate(4deg); }
+			90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+			100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+		}
+
     
 body {
  background-color: white;
@@ -20,6 +34,13 @@ p {
     background: #b8e5e3;
     padding-top: 15px;
 }
+#turn {
+    height: 20px;
+    display: inline;
+}
+#turn:hover{
+	
+}
 
 #name {
     font-family: REST;
@@ -28,6 +49,15 @@ p {
 }
 #lol {
     float: left;
+}
+
+#lol:hover {
+-webkit-animation-name: shake;
+			-webkit-animation-duration: 0.8s;
+			-webkit-transform-origin:	100% 100%;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+
 }
 nav {
     
@@ -67,11 +97,20 @@ nav ul {
 	}
 	nav ul li:hover {
 		background: #b8e5e3;
+    
 	}
+        nav ul li img:hover {
+          -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+        }
 		nav ul li:hover a {
 			color: #fff;
 		}
-	
+
+	  
 	nav ul li a {
 		display: block; padding: 25px 40px;
 		color: #93B7B6; text-decoration: none;
@@ -79,6 +118,7 @@ nav ul {
 nav ul ul {
 	background: #b8e5e3; border-radius: 0px; padding: 0;
 	 top: 100%;
+    
 }
 	nav ul ul li {
 		float: none; 
