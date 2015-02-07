@@ -10,14 +10,90 @@
     
 body {
  background-color: white;
-max-width: 960px;
+
 } 
+.top {
+    height: 150px;
+    background: #b8e5e3;
+    padding-top: 15px;
+}
+
+#name {
+    font-family: REST;
+    font-size: 40px;
+    text-align: center;
+}
+nav {
+    width: 100%;
+    text-align: center;
+}
+
+nav:hover {
+    background-color: #b8e5e3;
+    z-index: 5;
+}
+a {
+    text-decoration: none;
+}
+
+li {
+    font-family: AYTBIT;
+    width: 100%;
+}
+
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+
+nav ul { 
+    text-align: center;
+	list-style: none;
+	position: relative;
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+	nav ul li:hover {
+		background: #b8e5e3;
+	}
+		nav ul li:hover a {
+			color: #fff;
+		}
+	
+	nav ul li a {
+		display: block; padding: 25px 40px;
+		color: #93B7B6; text-decoration: none;
+	}
+nav ul ul {
+	background: #b8e5e3; border-radius: 0px; padding: 0;
+	 top: 100%;
+}
+	nav ul ul li {
+		float: none; 
+		border-top: 1px solid #b8e5e3;
+		border-bottom: 1px solid #b8e5e3;
+		position: relative;
+	}
+		nav ul ul li a {
+			padding: 15px 40px;
+			color: #fff;
+		}	
+			nav ul ul li a:hover {
+				background: #93B7B6;
+			}
+ nav ul ul ul {
+	position: absolute; 
+}
+/*
 .clearfix{
-    width: 40%;
+    width: 100%;
 }
 
 .splash{
-    width: 100%;
     height: 140px;
     background: #a6e4e7;
     margin-top: 0px;
@@ -25,13 +101,8 @@ max-width: 960px;
 }
 
 .grid-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 960px;
-    padding-top: 10px;
-    font-family: REST;
+    padding: 0px;
     font-size: 30px;
-    text-align: center;
     
 }
 
@@ -44,13 +115,12 @@ max-width: 960px;
 }
 
 .menu-wrap {
-    width: 50%;
+    width: 100%;
     background: #a6e4e7;
 }
 #right{
-    float: left;
-    margin-top:1px;
-    height: px;
+    left: 0;
+    margin-top: -25px;
     
 }
 .menu {
@@ -109,3 +179,4 @@ max-width: 960px;
     display: block;
 }
 
+*/
