@@ -45,6 +45,8 @@ body {
 } 
 p {
     padding-left:10px;
+    z-index: -1;
+    word-wrap:break-word;
 }
 .top {
     height: 150px;
@@ -55,9 +57,7 @@ p {
     height: 20px;
     display: inline;
 }
-#turn:hover{
-	
-}
+
 
 #name {
     font-family: REST;
@@ -80,9 +80,10 @@ p {
 }
 nav {
     
+    z-index: 2;
     width: 100%;
     text-align: center;
-    position: fixed;
+    position:static;
 }
 
 nav:hover {
@@ -114,6 +115,9 @@ nav ul {
 	nav ul:after {
 		content: ""; clear: both; display: block;
 	}
+nav ul:hover{
+    background-color: #b8e5e3;
+}
 	nav ul li:hover {
 		background: #b8e5e3;
     
