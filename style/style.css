@@ -10,8 +10,11 @@
     
 body {
  background-color: white;
-
+ font-family: REST;
 } 
+p {
+    padding-left:10px;
+}
 .top {
     height: 150px;
     background: #b8e5e3;
@@ -27,8 +30,10 @@ body {
     float: left;
 }
 nav {
+    
     width: 100%;
     text-align: center;
+    position: fixed;
 }
 
 nav:hover {
