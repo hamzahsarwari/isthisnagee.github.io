@@ -21,6 +21,16 @@
 			100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 		}
 
+@-webkit-keyframes hi {
+        0% {-webkit-transform: translate(10px);}
+        25% {-webkit-transform: translate(20px);}
+        50% {-webkit-transform: translate(30px);}
+        75% {-webkit-transform: translate(44px);}
+        100% {-webkit-transform: translate(0px);}
+    
+
+}
+
     
 body {
  background-color: white;
@@ -49,11 +59,13 @@ p {
 }
 #lol {
     float: left;
+    height: 75px;
+    margin-left: -44px;
 }
 
 #lol:hover {
--webkit-animation-name: shake;
-			-webkit-animation-duration: 0.8s;
+-webkit-animation-name: hi;
+			-webkit-animation-duration: 1s;
 			-webkit-transform-origin:	100% 100%;
 			-webkit-animation-iteration-count: infinite;
 			-webkit-animation-timing-function: linear;
