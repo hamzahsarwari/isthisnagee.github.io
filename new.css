@@ -82,6 +82,7 @@ li{
 
 .projects:hover div {
     display: block;
+    background-color: grey;
     }
 li #bot {
     display: inline;
@@ -97,3 +98,6 @@ li #bot {
     font-family: loll;
 }
 
+.title {
+    font-size: 22px;
+}
