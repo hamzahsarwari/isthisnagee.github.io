@@ -55,11 +55,13 @@ iframe {
 #pro{
 font-size: 30px;
 }
+/*
 ul li:first-child:hover iframe{
    display:block;
     width: 600;
     height: 700;
 }
+*/
 
 .projects {
   font-family: "courier new";
