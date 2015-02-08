@@ -17,6 +17,7 @@
 
 
 .text{
+    font-size: 22px;
     padding: 5px;
     padding-left: 10px;
     text-align: center;
@@ -44,11 +45,15 @@ body{
     text-align: center;
 }
 .smaller{
+    font-size: 30px;
     margin-right: 45px;
     margin-left: 45px;
 }
 iframe {
     display: none;
+}
+#pro{
+font-size: 30px;
 }
 ul li:first-child:hover iframe{
    display:block;
