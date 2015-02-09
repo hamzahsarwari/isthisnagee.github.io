@@ -82,7 +82,7 @@ li{
 
 .projects:hover div {
     display: block;
-    background-color: grey;
+    background-color: #FFFFDF;
     }
 li #bot {
     display: inline;
