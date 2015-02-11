@@ -15,6 +15,13 @@
 			100% { -webkit-transform:  rotate(-90deg);
 }}
 
+@media screen and (max-width: 375) {
+  .projects{
+    width: 600px;
+    background-color: red;
+  }
+}
+
 
 .text{
     font-size: 22px;
@@ -82,7 +89,11 @@ li{
 
 .projects:hover div {
     display: block;
+<<<<<<< Updated upstream
     background-color: #FFFFDF;
+=======
+    background-color:#FFFFED;
+>>>>>>> Stashed changes
     }
 li #bot {
     display: inline;
