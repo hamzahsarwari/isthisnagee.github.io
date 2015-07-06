@@ -1,0 +1,170 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@font-face {
+    src: url(fonts/roboto/Roboto-Light.ttf);
+    font-family: 'roboto';
+}
+* {
+  background-color: #F3FFE2;
+  margin: 0px;
+  padding: 0px;
+  color: #225378;
+}
+::selection {
+  background: #ACF0F2;
+}
+::-moz-selection {
+  background: #ACF0F2;
+}
+
+h3{
+  text-align: center;
+}
+
+.main{
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: justify;
+  font-family: roboto;
+  /*font-family: 'Droid Serif', serif;*/
+  /*color: white #5D7194;*/
+  font-size: 16px;
+}
+
+#pic {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+    color: #EB7F00;
+}
+
+a:hover {
+  color: #947531;
+}
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #405E94;
+    margin: 1em 0; padding: 0;
+    margin-right: 15%; margin-left: 15%;}
+#intro-title{
+  margin-top: 10px;
+  font-size: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+#title{
+  overflow: hidden;
+  position: sticky;
+  z-index: 100;
+  color: #F3FFE2;
+  background-color:#225378;
+  /*margin-right: 15%;
+  margin-left: 15%;*/
+  text-align: center;
+  font-size: 36px;
+  padding: 10px;
+}
+
+
+.links {
+  font-size: 2em;
+  text-align: center;
+}
+.links li{
+ padding-right: 5%;
+ padding-left: 5%;
+ border-left: none;
+ list-style: none;
+ display: inline;
+}
+
+#stay{
+
+  width: 100%;
+  text-align: center;
+}
+
+
+.side-links {
+  display: none;
+  font-size: 20px;
+  float: left;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-left: 10px;
+  text-align: left;
+  color: #BBC0C9;
+  }
+
+.side-links li{
+  list-style: none;
+  margin-top: 15%;
+
+}
+#projects-title{
+  margin-top: 10px;
+  font-size: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: monospace;
+  color: #C2C42D;
+}
+
+#blogs-title{
+  margin-top: 10px;
+  font-size: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: #1B2333;
+}
+
+#contact-title{
+  margin-top: 10px;
+  font-size: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: #8872EE;
+}
+
+.indent {
+  padding-left: 15px;
+}
+
+.projects-list li{
+  list-style: none;
+}
+.title{
+  padding: 10px;
+}
+img {
+  height: 22px;
+  width: 22px;
+}
+#bottom{
+  padding-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .links li{
+    display: block;
+    list-style: none;
+  }
+
+  .links {
+    display: block;
+  }
+}
