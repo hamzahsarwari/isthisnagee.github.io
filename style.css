@@ -1,153 +1,155 @@
-dding: 0px;
+* {
+    font-family: courier;
+    padding: 0px;
     margin: 0px;
-	    margin-top: 5px;
-		    margin-bottom: 5px;
-		}
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
-		main {
-			    font-size: 12px;
-				    color: skyblue;
-					    margin-right: auto;
-						    margin-left: auto;
-							    width: 50%;
-							}
+main {
+    font-size: 12px;
+    color: skyblue;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
 
-							.container:before {
-								    content: "<body>";
-								}
+.container:before {
+    content: "<body>";
+}
 
-								.container:after {
-									    content: "</body>"
-									}
+.container:after {
+    content: "</body>"
+}
 
-									.container {
-										    margin-right: auto;
-											    margin-left: auto;
-												    width: 50%;
-												}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
 
-												:before,
-												:after {
-													    text-decoration: none;
-														    font-weight: 100;
-															    font-size: 12px;
-																    color: skyblue;
-																}
+:before,
+:after {
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 12px;
+    color: skyblue;
+}
 
-																div:before {
-																	    color: skyblue;
-																		    content: '<div class="' attr(class) '">'
-																		}
+div:before {
+    color: skyblue;
+    content: '<div class="' attr(class) '">'
+}
 
-																		div:after {
-																			    color: skyblue;
-																				    content: '</div>'
-																				}
+div:after {
+    color: skyblue;
+    content: '</div>'
+}
 
-																				.section:before {
-																					    content: '<div class="' attr(id)'">';
-																						    margin-left: 20px;
-																						}
+.section:before {
+    content: '<div class="' attr(id)'">';
+    margin-left: 20px;
+}
 
-																						.section:after {
-																							    margin-left: 20px;
-																							}
+.section:after {
+    margin-left: 20px;
+}
 
-																							.section p:before {
-																								    margin-left: 40px;
-																								}
+.section p:before {
+    margin-left: 40px;
+}
 
-																								p:before {
-																									    color: skyblue;
-																										    margin-left: 20px;
-																											    content: '<p id="' attr(id) '">'
-																											}
+p:before {
+    color: skyblue;
+    margin-left: 20px;
+    content: '<p id="' attr(id) '">'
+}
 
-																											p:after {
-																												    color: skyblue;
-																													    content: '</p>';
-																													}
+p:after {
+    color: skyblue;
+    content: '</p>';
+}
 
-																													h1:before {
-																														    color: skyblue;
-																															    margin-left: 20px;
-																																    content: '<h1 id="' attr(id) '">'
-																																}
+h1:before {
+    color: skyblue;
+    margin-left: 20px;
+    content: '<h1 id="' attr(id) '">'
+}
 
-																																h1:after {
-																																	    color: skyblue;
-																																		    content: '</h1>';
-																																		}
+h1:after {
+    color: skyblue;
+    content: '</h1>';
+}
 
-																																		h3:before {
-																																			    color: skyblue;
-																																				    margin-left: 20px;
-																																					    content: '<h3 class="' attr(class) '">'
-																																					}
+h3:before {
+    color: skyblue;
+    margin-left: 20px;
+    content: '<h3 class="' attr(class) '">'
+}
 
-																																					h3:after {
-																																						    color: skyblue;
-																																							    content: '</h3>';
-																																							}
+h3:after {
+    color: skyblue;
+    content: '</h3>';
+}
 
-																																							a:before {
-																																								    color: skyblue;
-																																									    ;
-																																										    display: inline-block;
-																																											    text-decoration: none;
-																																												    content: '<a href="' attr(href) '">';
-																																												}
+a:before {
+    color: skyblue;
+    ;
+    display: inline-block;
+    text-decoration: none;
+    content: '<a href="' attr(href) '">';
+}
 
-																																												a:after {
-																																													    color: skyblue;
-																																														    display: inline-block;
-																																															    content: '</a>';
-																																																    text-decoration: none;
-																																																}
+a:after {
+    color: skyblue;
+    display: inline-block;
+    content: '</a>';
+    text-decoration: none;
+}
 
-																																																ul:before {
-																																																	    content: "<ul>";
-																																																	}
+ul:before {
+    content: "<ul>";
+}
 
-																																																	ul:after {
-																																																		    content: "</ul>";
-																																																		}
+ul:after {
+    content: "</ul>";
+}
 
-																																																		li:before {
-																																																			    content: "<li>";
-																																																			}
+li:before {
+    content: "<li>";
+}
 
-																																																			li:after {
-																																																				    content: "</li>";
-																																																				}
+li:after {
+    content: "</li>";
+}
 
-																																																				.m20 {
-																																																					    margin-left: 20px;
-																																																					}
+.m20 {
+    margin-left: 20px;
+}
 
-																																																					.m40 {
-																																																						    margin-left: 40px;
-																																																						}
+.m40 {
+    margin-left: 40px;
+}
 
-																																																						.m60 {
-																																																							    margin-left: 60px;
-																																																							}
+.m60 {
+    margin-left: 60px;
+}
 
-																																																							.comment {
-																																																								    color: grey;
-																																																								}
+.comment {
+    color: grey;
+}
 
-																																																								ul{
-																																																									    list-style: none;
-																																																									}
+ul{
+    list-style: none;
+}
 
-																																																									@media only screen and (max-width: 500px) {
-																																																										    .container {
-																																																												        width: 100%;
-																																																														        padding: 10px;
-																																																																    }
-																																																																	    main {
-																																																																			        width: 100%;
-																																																																					        padding: 10px;
-																																																																							    }
-																																																																							}
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+}
