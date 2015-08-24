@@ -58,6 +58,32 @@ a:visited {
     font-weight: bold;
 }
 
+.i {
+    color: skyblue;
+    position: relative;
+}
+
+.i:before {
+    content: "ı";
+    position: absolute;
+    color: #444;
+}
+
 .bcolor {
     color: skyblue;
+}
+
+@media screen and (max-width: 600px) {
+    .flex-container {
+        width: 100%;
+        height: 500px;
+        margin-top: 200px;
+    }
+    .Largeheadline {
+        font-size: 120px;
+        line-height: 90px;
+    }
+    .Smallheadline {
+        font-size: 40px;
+    }
 }
