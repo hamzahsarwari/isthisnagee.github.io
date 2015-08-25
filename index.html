@@ -3,24 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <link type="text/css" href="style.css" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ <script src="FitText.js-master/jquery.fittext.js"></script>
 </head>
 
 <body>
 
     <div class="flex-container">
         <div class="row">
-            <p class="Smallheadline"> <a href="resume.html">resume</a>
+            <h5 class="Smallheadline"> <a href="resume.html">resume</a>
                 <span class="bcolor">|</span><a href="http://isthisnagee.github.com/blog"> blog </a>
                 <span class="bcolor">|</span><a href="http://github.com/isthisnagee"> github </a>
                 <span class="bcolor">|</span> <a href="mailto:nagee.elghassein@mail.utoronto.ca">email</a>
                 <span class="bcolor">|</span> <a href="http://twitter.com/isthisnagee">twitter</a>
-            </p>
-            <p class="Largeheadline"><span class="firstname">Nagee</span> Elghasse<span class="i">i</span>n</p>
+            </h5>
+            <h1 class="Largeheadline"><span class="firstname">Nagee</span> Elghassein</h1>
         </div>
     </div>
 
-
+    <script>
+    $(".Largeheadline").fitText(.8);
+    $('.Smallheadline').fitText(3);
+    </script>
 </body>
 
 </html>

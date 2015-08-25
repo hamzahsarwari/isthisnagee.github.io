@@ -22,7 +22,8 @@ a:visited {
 }
 
 .flex-container {
-    height: 100%;
+  margin-top: 20%;
+    /*height: 100%;
     padding: 0;
     margin: 0;
     display: -webkit-box;
@@ -31,7 +32,10 @@ a:visited {
     display: -webkit-flex;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
+    maring: 0 auto;
+    width: 80%;
+    position: absolute;
 }
 
 .row {
@@ -39,9 +43,10 @@ a:visited {
 }
 
 .Smallheadline {
+  margin-right: 10px;
     font-family: 'Roboto', Verdana;
-    font-size: 15px;
-    line-height: 18px;
+    /*font-size: 15px;*/
+    line-height: 25px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
@@ -52,10 +57,11 @@ a:visited {
     color: #444;
     margin: 0;
     padding: 0px 0px 6px 0px;
-    font-size: 60px;
-    line-height: 44px;
+    /*font-size: 60px;*/
+    line-height: 50px;
     letter-spacing: -2px;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .i {
@@ -73,6 +79,7 @@ a:visited {
     color: skyblue;
 }
 
+/*
 @media screen and (max-width: 600px) {
     .flex-container {
         width: 100%;
@@ -86,4 +93,4 @@ a:visited {
     .Smallheadline {
         font-size: 40px;
     }
-}
+}*/
