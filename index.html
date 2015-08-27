@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html>
+
+</html>
 
 <head>
-    <meta charset="utf-8">
- <link rel="stylesheet" type="text/css" href="style.css">
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
- <script src="FitText.js-master/jquery.fittext.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="action.js" type="text/javascript"></script>
 </head>
 
 <body>
-
-    <div class="flex-container">
-        <div class="row">
-            <h5 class="Smallheadline"> <a href="resume.html">resume</a>
-                <span class="bcolor">|</span><a href="http://isthisnagee.github.com/blog"> blog </a>
-                <span class="bcolor">|</span><a href="http://github.com/isthisnagee"> github </a>
-                <span class="bcolor">|</span> <a href="mailto:nagee.elghassein@mail.utoronto.ca">email</a>
-                <span class="bcolor">|</span> <a href="http://twitter.com/isthisnagee">twitter</a>
-            </h5>
-            <h1 class="Largeheadline"><span class="firstname">Nagee</span> Elghassein</h1>
+    <!--    <div id="header">Nagee Elghassein</div>-->
+    <div id="code">
+        <span style="margin-left: 15px;color:#444">python3 -i hello_world.py</span>
+        <div id="console">
+             &gt; Nagee = Person("Nagee", website="<a href="http://isthisnagee.github.io">isthisnagee.github.io</a>")
+            <br/>
+             &gt; Nagee.origin
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; "Folsom, CA"<br/><br/></span> &gt; Nagee.education
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; "University of Toronto"<br/><br/></span>
+            &gt; Nagee.majors
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; "Computer Science Specialist, Math Major"<br/><br/></span> 
+            &gt; Nagee.focuses
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; "Theory of Computation"<br/><br/></span> 
+            &gt; Nagee.interests
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; ["software", "design", "tea", "reading", "soccer"]<br/><br/></span> &gt; Nagee.workExperience.latest
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; Latest Work Experience<br/>
+												 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; company: "California Department of Transportation"<br/>
+												 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; role: "Front End Developer"<br/>
+												 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; startDate: "July 2015"<br/>
+												 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; endDate: "September 2015"<br/>
+							<br/></span> &gt; Nagee.resume
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank" href="/resume">isthisnagee.github.io/resume</a>"<br/><br/></span> &gt; Nagee.thoughts
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; ["<a target="_blank" href="http://www.twitter.com/isthisnagee">@isthisnagee</a>",
+								 "<a target="_blank" href="http://isthisnagee.github.io/blog">blog</a>"]<br/><br/></span> &gt; Nagee.email
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; "<a target="_blank" href="mailto:Nagee.nakano@gmail.com">Nagee.Elghassein@mail.utoronto.ca</a>"<br/><br/></span>
+            &gt; Nagee.goodBye
+            <br/>
+            <span class="answer">&nbsp;&nbsp;=&gt; <img src="me.png"><br/><br/></span>
         </div>
     </div>
-
-    <script>
-    $(".Largeheadline").fitText(.8);
-    $('.Smallheadline').fitText(3);
-    </script>
+    </div>
+    <br/>
+    </div>
 </body>
 
 </html>
