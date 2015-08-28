@@ -1,62 +1,88 @@
 <!DOCTYPE html>
-<html>
+
+</html>
+
 <head>
-  <link rel="stylesheet" type="text/css" href="rstyle.css" />
+    <link href="1140.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="action.js" type="text/javascript"></script>
 </head>
+
 <body>
-  <div class="rwidth">
-    <div class="rcontent">
-      <div class="name">
-        <span class="light">Nagee</span> Elghassein
-      </div>
-      <div class="pagename">
-        Resume
-      </div>
-      <div class="quote">
-        <span class="iblue">Always Willing to Learn</span>
-      </div>
-      <div id="education" class="section">
-        <div class="stitle">
-          <p>Education</p>
+    <div class="container16">
+
+        <div id="name" class="column16">Nagee Elghassein | <span id="resume">Resume</span> </div>
+        
+        <br/>
+            
+        <!-- Quote -->
+        <div class="column16">        <h3 style="text-align:center;"> Always Willing to Learn</h3>
+</div>
+        <!-- Education -->
+        <div class="column16 section-title">Education</div>
+        <div class="row">
+            <div class="column2 date">2014-2018 (expected)</div>
+            <div class="column4 title">Bsc. Computer Science; BSc. Math, <span class="italics"> The University of Toronto</span>
+            </div>
+            <div class="column10">Planned Computer Science Specialist with a focus in the Theory of Computation and a Mathematics Major.</div>
         </div>
-        <div id="uoft" class="yearyear">2014 - current</div>
-          <div class="yearyeartext"><b>BSc. Computer Science; BSc. Math</b>, <i>The University of Toronto, St. George</i>.
-          <br>
-              <span class="detail">Planned Computer Science Specialist with a focus in the Theory of Computation and a Math Major</span>
-          </div>
-      </div>
-
-      <div id="work" class="section">
-        <div class="stitle">
-            <p>Experience</p>
+        <!-- Work Experience -->
+        <div class="column16 section-title">Work Experience</div>
+        <div class="row">
+            <div class="column2 date">July-Sept. 2015</div>
+            <div class="column4 title">
+                Student Assistant Volunteer, <span class="italics"> California Department of Transportation</span>
+            </div>
+            <div class="column10">
+                Created and designed the front end for an internal course selection website to be used by Caltrans employees. I also Developed web-scrapers and integrated the data collected with an existing Work Breakdown Structure file, and created a user interface which allowed users to connect data from different files.
+            </div>
         </div>
-        <div id="caltrans" class="yearyear">July-August 2015</div>
-          <div class="yearyeartext"><b>Students Assistant Volunteer</b>, <i>California Department of Transportation</i>.
-          <br>
-              <span class="detail">
-              Developed parsing scripts and integrated the data gathered with an existing Work Breakdown Structure XML, and created a user interface for interacting with that data. I also developed the front end for the courses offered by the Department, allowing employees to look at the training available.
-              </span>
-          </div>
-      </div>
 
-      <div id="projects" class="section">
-        <div class="stitle">
-          <p>Projects</p>
+        <!-- Personal Projects -->
+        <div class="column16 section-title">Personal Projects</div>
+        <!-- Epsilon Delta -->
+        <div class="row">
+            <div class="column2 date">Dec. 2014</div>
+            <div class="column4 title">Epsilon Delta, A Proof Generator</span>
+            </div>
+            <div class="column10">
+                Made a website which generates proofs based on user given parameters (a limit and a function) to help students understand the structure of ε − δ and general proofs. It currently handles some elementary functions (ax ± b and ax^2 ± b).
+            </div>
         </div>
-        <div id="epsilondelta" class="yearyear">Dec. 2014</div>
-          <div class="yearyeartext"><b><a href="github.com/isthisnagee/Epsilon-Delta">Epsilon-Delta</a></b>.
-          <br>
-              <span class="detail">Generates proofs based on user given parameters (a limit and a function) to help students understand the structure of ε − δ and general proofs. It currently handles some elementary functions (ax ± b and ax2 ± b).</span>
-          </div>
-          <div id="movie" class="yearyear">June 2015</div>
-            <div class="yearyeartext"><b><a href="github.com/isthisnagee">Math Movie Database</a></b>.
-            <br>
-              <span class="detail">A modern redesign of the math movie database, from simple html text to a blend of html, css, and javascript. </span>
-          </div>
-      </div>
-    </div>
-  </div>
+
+        <!-- Reddit Bots -->
+
+        <div class="row">
+            <div class="column2 date">Jan. 2015</div>
+            <div class="column4 title"> Bots</span>
+            </div>
+            <div class="column10">
+                Developed two (currently inactive) bots, Gandhi Bot and WhereInTheWorld Bot. Gandhi Bot replies to comments on Reddit that have the name Gandhi misspelled, telling them the correct spelling of the name; WhereInTheWorld replies to users on /r/worldnews that ask where a country is, and replies to those users with a comment mentioning the total population, langugaes spoken, and a photo of the location of the country in question.
+            </div>
+        </div>
 
 
+        <!-- Hackathon Projects -->
+
+        <div class="row">
+            <div class="column2 date">Jan/Feb 2015</div>
+            <div class="column4 title"> Hackathon Projects</span>
+            </div>
+            <div class="column10">
+                At McHaks (McGill University), I worked on the front end for a web app that allows McGill students to find extra courses to fill in thier almost completed schedules. At UofTHacks, I worked on an algorithm that sorted through UofT courses to give students a schedule based on the courses they picked and the preferences they wanted.</div>
+</div>
+
+            <!-- In Progress -->
+
+            <div class="row">
+                <div class="column2 date">August 2015-Current</div>
+                <div class="column4 title"> <span class="italics">(IN PROGRESS)</span> Math Movie Database</span>
+                </div>
+                <div class="column10">
+                    A modern redesign of the Math Movie Database. The project includes webscrapers for the Math Movie Database website, scripts to get images for every movie, and Django backend.
+                </div>
+            </div>
+        </div>
 </body>
+
 </html>
