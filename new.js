@@ -19,7 +19,7 @@ function sendText(e) {
 	  window.open("http://iccf-holland.org");
 	  a.innerHTML = "";	
 	} else if (t == ":contact") {
-	  window.open("http://www.yahoo.com");
+		window.location.href = "mailto:nagee.elghassein@mail.utoronto.ca";
 	  a.innerHTML = "";	
 	} else if (t == ":hire") {
 	  window.open("http://isthisnagee.github.io/resume");
