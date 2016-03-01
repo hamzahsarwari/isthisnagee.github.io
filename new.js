@@ -19,7 +19,7 @@ function sendText(e) {
 	  window.open("http://iccf-holland.org");
 	  a.innerHTML = "";	
 	} else if (t == ":contact") {
-		window.location.href = "mailto:nagee.elghassein@mail.utoronto.ca";
+	  window.open("http://www.yahoo.com");
 	  a.innerHTML = "";	
 	} else if (t == ":hire") {
 	  window.open("http://isthisnagee.github.io/resume");
@@ -32,16 +32,9 @@ function sendText(e) {
 	}	
 }
 
-function focusPress(e) {
-	var keynum;
-	 if (window.event) {
-		 keynum = e.keyCode;
-	 } else {
-		 if (e.which) {
-			 keynum = e.which;
-		 }
-	 }
-	 if (keynum == 27) {
-     document.getElementById("vim").focus();
-	 }
+document.onkeydown = function(e) {
+    e = e || window.event;
+    if (e.keyCode == 27) {
+      document.getElementById("vim").focus();
+    }
 }
