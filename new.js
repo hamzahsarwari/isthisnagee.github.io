@@ -16,7 +16,7 @@ function sendText(e) {
   var t = document.getElementById("vim").value;
 	var a =  document.getElementById("msg");
   if (t == ":help sponsor") {
-	  window.open("http://iccf-holland.org");
+	  window.open("http://www.cic.gc.ca/english/refugees/welcome/help.asp");
 	  a.innerHTML = "";	
 	} else if (t == ":contact") {
 	  window.open("mailto:nagee.elghassien@mail.utoronto.ca?Subject=Hello%20Nagee");
