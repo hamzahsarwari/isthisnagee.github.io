@@ -19,7 +19,7 @@ function sendText(e) {
 	  window.open("http://iccf-holland.org");
 	  a.innerHTML = "";	
 	} else if (t == ":contact") {
-	  window.open("http://www.yahoo.com");
+	  window.open("mailto:nagee.elghassien@mail.utoronto.ca?Subject=Hello%20Nagee");
 	  a.innerHTML = "";	
 	} else if (t == ":hire") {
 	  window.open("http://isthisnagee.github.io/resume");
@@ -31,6 +31,7 @@ function sendText(e) {
 	  a.innerHTML =  t + " is not correct";
 	}	
 }
+
 
 document.onkeydown = function(e) {
     e = e || window.event;
