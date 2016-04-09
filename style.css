@@ -1,0 +1,56 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  background-color: #282828;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+  color: #B1BEA4;
+}
+
+div.wrapper {
+  height: 100%;
+  min-height: 100%;
+}
+
+div.content {
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 500px;
+  line-height: 500px;
+  text-align: center;
+}
+
+div.content span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+div.projects {
+  padding: 2px;
+  margin: 2px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.large {
+  font-size: 40px;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 700;
+  color: #F1EDC0; 
+  margin-bottom: 5px;
+}
+
+a {
+  color: #CED59F;
+  font-size: 20px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
