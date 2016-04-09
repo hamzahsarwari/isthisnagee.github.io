@@ -35,17 +35,20 @@ div.projects {
   margin: 0 auto;
 }
 
+
+
+a {
+  color: #CED59F;
+  font-size: 20px;
+}
+
 .large {
+  text-decoration: none;
   font-size: 40px;
   font-family: 'Playfair Display SC', serif;
   font-weight: 700;
   color: #F1EDC0; 
   margin-bottom: 5px;
-}
-
-a {
-  color: #CED59F;
-  font-size: 20px;
 }
 
 footer {
