@@ -1,0 +1,6 @@
+pygments: true
+markdown: kramdown
+url: http://isthisnagee.github.io/blog
+title: isthisblog
+author: isthisnagee
+paginate: 4
