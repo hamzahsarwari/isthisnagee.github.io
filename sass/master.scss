@@ -1,0 +1,51 @@
+$background: #FFFFFF;
+$dark: #070908;
+$accentLight: #A7F5F5;
+$accentDark: #515135;
+$highlight: #BC8B02;
+
+@import 'https://fonts.googleapis.com/css?family=Space+Mono';
+
+
+.highlight {
+	border-bottom: 5px solid $highlight;
+}
+
+* {
+	font-family: 'Space Mono', monospace;
+}
+
+#current .highlight {
+	font-family: sans-serif;
+	border-color: $dark;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	border-bottom: 4px solid $accentLight
+}
+
+a:hover {
+	color: $accentLight;
+	background-color: $accentDark;
+}
+
+.date {
+	background-color: $accentLight;
+	opacity: 0.5;
+}
+
+.position {
+	background-color: $highlight;
+	font-weight: 500;
+}
+
+.entry {
+	border-bottom: 1px dotted $dark;
+	margin-bottom: 20px;
+}
+
+p .highlight {
+	border-bottom: 2px solid $highlight;
+}

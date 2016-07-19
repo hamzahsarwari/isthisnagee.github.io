@@ -1,0 +1,17 @@
+$logo-color-list: (
+	twitter #55ACEE,
+	facebook #3b5998,
+	medium #00AB6C,
+	vim #007f00,
+	github #4183c4,
+	emacs #7F5AB6,
+	smud #F15C22,
+	uoft #00204E,
+	caltrans #31b0d5
+);
+
+@each $company, $color in $logo-color-list {
+	.#{$company} {
+		color: $color;
+	}
+}

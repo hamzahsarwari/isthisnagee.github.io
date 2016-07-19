@@ -1,0 +1,36 @@
+@import "https://fonts.googleapis.com/css?family=Space+Mono";
+.highlight {
+  border-bottom: 5px solid #BC8B02; }
+
+* {
+  font-family: 'Space Mono', monospace; }
+
+#current .highlight {
+  font-family: sans-serif;
+  border-color: #070908; }
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 4px solid #A7F5F5; }
+
+a:hover {
+  color: #A7F5F5;
+  background-color: #515135; }
+
+.date {
+  background-color: #A7F5F5;
+  opacity: 0.5; }
+
+.position {
+  background-color: #BC8B02;
+  font-weight: 500; }
+
+.entry {
+  border-bottom: 1px dotted #070908;
+  margin-bottom: 20px; }
+
+p .highlight {
+  border-bottom: 2px solid #BC8B02; }
+
+/*# sourceMappingURL=master.css.map */
