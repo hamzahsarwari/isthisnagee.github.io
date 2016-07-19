@@ -8,7 +8,7 @@ $logo-color-list: (
 	smud #F15C22,
 	uoft #00204E,
 	caltrans #31b0d5,
-	blue blue
+	"blue" #0000ff 
 );
 
 @each $company, $color in $logo-color-list {
