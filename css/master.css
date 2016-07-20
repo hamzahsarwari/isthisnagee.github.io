@@ -33,4 +33,8 @@ a:hover {
 p .highlight {
   border-bottom: 2px solid #BC8B02; }
 
+pre .jokes {
+  height: 100px;
+  background-color: #515135; }
+
 /*# sourceMappingURL=master.css.map */

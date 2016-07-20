@@ -49,3 +49,8 @@ a:hover {
 p .highlight {
 	border-bottom: 2px solid $highlight;
 }
+
+pre .jokes {
+	height: 100px;
+	background-color: $accentDark;
+}
