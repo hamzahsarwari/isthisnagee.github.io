@@ -1,0 +1,18 @@
+{
+	"colors": [
+		{
+			"background": "#F6F6F6",
+			"dark": "#333333",
+			"accentLight": "#9AFB6B",
+			"accentDark": "4C7EB1",
+			"highlight": "#F5696C" 
+		},
+		{
+			"background": "#F4F4F4",
+			"dark": "#585180",
+			"accentLight": "#7A6BFF",
+			"accentDark": "#CDFFBD",
+			"highlight": "#1C2D4D" 
+		}
+	]
+}
