@@ -1,17 +1,21 @@
 window.onload = function() {
-	getData("http://159.203.47.33:3000/lastfm/isthisnagee/lastplayed");
+	var colorData = getData('js/color.json');
+	colorData(changeColors);
 };
 
 
 function getData(url) {
-  $.ajax({
-		dataType: "json",
-		url: url,
-		success: function(data) {
-			updateLastFm(data);
-		}
-	});
+  return function(dataFunc) {
+		$.ajax({
+			dataType: "json",
+			url: url,
+			success: function(data) {
+				dataFunc(data);
+			}
+		});
+	};
 }
+
 
 function updateLastFm(lastfm) {
 	// get jqeury stuff
@@ -44,5 +48,32 @@ function updateLastFm(lastfm) {
 	// put in html
 	albumTextDiv.replaceWith(albumText);
 	albumArtDiv.replaceWith(albumArtUrl);
+}
 
+
+
+function changeColors(jsonColors){
+  var colors = jsonColors['colors'];	
+	console.log('colors', colors);
+	if (colors) {
+    randIndex = Math.floor(Math.random() * colors.length);
+		var colorScheme = colors[randIndex];
+
+		var background = colorScheme["background"];
+		var dark       = colorScheme["dark"];
+		var accentLight= colorScheme["accentLight"];
+		var accentDark = colorScheme["accentDark"];
+		var highlight  = colorScheme["highlight"];
+
+		$('.highlight').css('border-bottom', '5px solid ' + highlight);
+		$('#current .highlight').css('border-color', dark);
+		$('a').css('border-bottom', '4px solid ' + accentLight);
+		$('a:hover').css('color', accentLight);
+		$('a:hover').css('background-color', accentDark);
+		$('.date').css('background-color', accentLight);
+		$('.position').css('background-color', highlight);
+		$('.entry').css('border-bottom', '1px dotted ' + dark);
+		$('p .highlight').css('border-bottom', '2px solid ' + highlight);
+		$('pre').css('background-color', accentDark);
+	}
 }

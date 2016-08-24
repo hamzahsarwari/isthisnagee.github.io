@@ -9,10 +9,10 @@
 		},
 		{
 			"background": "#F4F4F4",
-			"dark": "#585180",
-			"accentLight": "#7A6BFF",
-			"accentDark": "#CDFFBD",
-			"highlight": "#1C2D4D" 
+			"dark": "#1C2D4D",
+			"accentLight": "#CDFFBD",
+			"accentDark": "#7A6BFF",
+			"highlight": "#585180" 
 		}
 	]
 }
