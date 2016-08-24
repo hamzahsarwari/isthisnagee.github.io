@@ -68,8 +68,15 @@ function changeColors(jsonColors){
 		var highlight  = colorScheme["highlight"];
 
 		$('.highlight').css('border-bottom', '5px solid ' + highlight);
+		$('.date').css('background-color', accentLight);
+		$('.position').css('background-color', highlight);
+		$('.entry').css('border-bottom', '1px dotted ' + dark);
+		$('p .highlight').css('border-bottom', '2px solid ' + highlight);
+		$('.jokes').css('background-color ', accentDark);
+
 		$('#current .highlight').css('border-color', dark);
 		$('.a').css('border-bottom', '4px solid ' + accentLight);
+
 		$('a').hover(
 			function() { 
 				$(this).css('background-color', accentDark);
@@ -80,10 +87,6 @@ function changeColors(jsonColors){
 				$(this).css('color', 'black');
 			}
 		);
-		$('.date').css('background-color', accentLight);
-		$('.position').css('background-color', highlight);
-		$('.entry').css('border-bottom', '1px dotted ' + dark);
-		$('p .highlight').css('border-bottom', '2px solid ' + highlight);
-		$('.jokes').css('background-color ', accentDark);
+
 	}
 }
