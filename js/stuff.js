@@ -1,10 +1,12 @@
 window.onload = function() {
-	var colorData = getData('js/color.json');
-	colorData(changeColors);
+	var withColors = funcOnData('js/color.json');
+	withColors(changeColors);
+	var withLastFm = funcOnData('http://159.203.47.33:3000/lastfm/isthisnagee/lastplayed');
+	withLastFm(addToFrontEnd);
 };
 
 
-function getData(url) {
+function funcOnData(url) {
   return function(dataFunc) {
 		$.ajax({
 			dataType: "json",
@@ -18,7 +20,7 @@ function getData(url) {
 }
 
 
-function updateLastFm(lastfm) {
+function addToFrontEnd(lastfm) {
 	// get jqeury stuff
 	var albumTextDiv = $('#album-text');
 	var albumArtDiv = $('#album-art');
@@ -30,20 +32,20 @@ function updateLastFm(lastfm) {
 	console.log('albumArtLink', albumArtLink);
 
 	var albumNameText = albumName 
-		? '<span id="album-name">' + albumName + '</span>' 
+		? '<span id="album-name">album: ' + albumName + '</span>' 
 		: '';
 	var songNameText = songName
-	  ? '<span id="song-name">' + songName + '</span>'
+	  ? '<span id="song-name">song:&nbsp;&nbsp;' + songName + '</span>'
 	  : '';
 	var artistNameText = artistName
-	  ? '<span id="arist-name">' + artistName + '</span>'
+	  ? '<span id="arist-name">&nbsp;&nbsp;' + artistName + '</span>'
 	  : '';
 	var albumArtUrl = albumArtLink
 	  ? '<img src="' + albumArtLink['#text'] + '" alt="album cover" />'
     : '';	
 
   var albumText = songNameText && albumNameText && artistNameText 
-		? albumText = artistNameText + ':' + songNameText + ',' + albumNameText
+		? albumText = artistNameText + '<br>' + songNameText + '<br>' + albumNameText
 	  : albumText = artistNameText + ':' + songNameText;
 
 	// put in html
