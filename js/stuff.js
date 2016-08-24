@@ -84,6 +84,6 @@ function changeColors(jsonColors){
 		$('.position').css('background-color', highlight);
 		$('.entry').css('border-bottom', '1px dotted ' + dark);
 		$('p .highlight').css('border-bottom', '2px solid ' + highlight);
-		$('pre').css('background-color ', accentDark);
+		$('.jokes').css('background-color ', accentDark);
 	}
 }
