@@ -5,6 +5,9 @@
 * {
   font-family: 'Space Mono', monospace; }
 
+body {
+  background-color: #F4F4F4; }
+
 #current .highlight {
   font-family: sans-serif;
   border-color: #1C2D4D; }

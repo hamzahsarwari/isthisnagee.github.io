@@ -22,6 +22,10 @@ $highlight: #585180;
 	font-family: 'Space Mono', monospace;
 }
 
+body {
+	background-color: $background;
+}
+
 #current .highlight {
 	font-family: sans-serif;
 	border-color: $dark;

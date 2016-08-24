@@ -63,10 +63,13 @@ function changeColors(jsonColors){
 
 		var background = colorScheme["background"];
 		var dark       = colorScheme["dark"];
+		var text       = colorScheme["text"];
 		var accentLight= colorScheme["accentLight"];
 		var accentDark = colorScheme["accentDark"];
 		var highlight  = colorScheme["highlight"];
 
+		$('body').css('color', text);
+		$('body').css('background-color', background);
 		$('.highlight').css('border-bottom', '5px solid ' + highlight);
 		$('.date').css('background-color', accentLight);
 		$('.position').css('background-color', highlight);
@@ -76,6 +79,7 @@ function changeColors(jsonColors){
 
 		$('#current .highlight').css('border-color', dark);
 		$('.a').css('border-bottom', '4px solid ' + accentLight);
+		$('.a').css('color', text);
 
 		$('a').hover(
 			function() { 
@@ -83,8 +87,8 @@ function changeColors(jsonColors){
 				$(this).css('color', accentLight);
 			}, 
 			function() {
+				$(this).css('color', text);
 				$(this).css('background-color', 'transparent');
-				$(this).css('color', 'black');
 			}
 		);
 
