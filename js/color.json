@@ -13,6 +13,14 @@
 			"accentLight": "#CDFFBD",
 			"accentDark": "#7A6BFF",
 			"highlight": "#585180" 
+		},
+		{
+			"background": "#CFDFEF",
+			"dark": "#131D38",
+			"accentLight": "#B5AB88",
+			"accentDark": "#0362D0",
+			"highlight": "#0AC7C3" 
 		}
+
 	]
 }
