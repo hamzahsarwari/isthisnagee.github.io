@@ -55,6 +55,14 @@
 			"accentLight": "#ffb86c",
 			"accentDark": "#6272a4",
 			"highlight": "#8be9fd" 
+		},
+		{
+			"text": "#B10DC9",
+			"background": "#FFDC00",
+			"dark": "#111111",
+			"accentLight": "#85144b",
+			"accentDark": "#001f3f",
+			"highlight": "#0074D9"
 		}
 	]
 }
