@@ -5,154 +5,94 @@
 		<link rel="icon" href="favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>N.D.E.</title>
-		<link rel="stylesheet" href="css/skeleton.css" type="text/css" media="screen" title="no title" charset="utf-8">	
-		<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/tachyons.css" type="text/css" media="screen" title="no title" charset="utf-8">	
+		<link rel="stylesheet" href="css/new.css" type="text/css" charset="utf-8">
 		<link rel="stylesheet" href="css/brands.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	</head>
-	<body>
-		<!-- container -->
-		<div id="main" class="container u-full-width">
-			<!-- NAV -->
-			<nav>
-				<div id="current">
-					<div class="row">
-						<div class="six columns">
-							<h1 class="highlight">
-								isthisnagee
-							</h1>
-							<p>
-              u can change the colors by refreshing
+	<body class="color-bg color-text">
+			<div class="ml4 ">
+				<header class="w6">
+					<p class="f2 bb bw2 pb1 color-underline sf">isthisnagee</p>
+				</header>
+				<nav class="">
+					<ul class="list pa0">
+						<li class="dib">
+							<a class="link color-a bb pb0 bw2" href="http://isthisnagee.github.io/resume">isthisresume
+							</a>&nbsp;||&nbsp;
+						</li>
+						<li class="dib">
+							<a class="bb pb0 bw2 link color-a" href="mailto:nagee.elghassein@mail.utoronto.ca">email
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="w-33-l w-100-ns">
+					<p class="lh-copy">
+					hi i'm nagee (pronounced na-jee, or ben at starbucks). i'm a software developer and third year computer science specialist at the university of toronto
+					</p>
+					<p class="lh-copy">
+					you can find me on
+					<span class="bb pb0 bw2"><a class="color-a link twitter" href="#">twitter</a></span> and
+					<span class="bb pb0 bw2"><a class="color-a link medium" href="#">medium</a></span> tho i binge tweet and i only write drafts.
+
+
+					</p>
+				</div>
+				<div class="cf">
+					<div class=" fl w-10 w3-l tc mt4 bg-black-05 ba bw2">
+						<div class="colors-list"></div>
+					</div>
+					<div class="fl w-80 pl5">
+						<section>
+							<div class="w4-5">
+								<p class="f3 bb pb1 bw2 color-underline">code</p>
+							</div>
+							<div class="w-50-l w-100-ns">
+								<p class="lh-copy">
+								i'm currently working on a command line interface for school directories using 
+								nodejs.
+								this includes cycling through textbooks for a course, generating hw/notes/essay
+								templates, and other things. u can check it out on 
+								<span class="bb pb0 bw2 pointer"><a class="color-a link github">github</a></span> 
+								</p>
+							</div>
+						</section>
+						<section>
+							<div class="w4-5">
+								<p class="f3 bb pb1 bw2 color-underline">write</p>
+							</div>
+							<p>check out my latest 
+							<span class="bb pb0 bw2"><a class="color-a link medium" href="#">medium</a></span>
+							article.
+							<div id="medium">
+								<article class="mw5 mv4">
+									<div class="">
+										<h1 class="f6 ttu tracked lh-2">
+											<a class="bb pb0 bw2 pointer color-a link medium">why i'm giving up latex notes</a>
+										</h1>
+									</div>
+								</article> 
+							</div>
+						</section>
+						<section>
+							<div class="w4-5">
+								<p class="f3 bb pb1 bw2 color-underline">listen</p>
+							</div>
+							<p class="lh-copy">
+							<span class="bb pb0 bw2"><a class="color-a link spotify" href="#">spotify</a></span> 
+							or apple music, that is the question.
 							</p>
-						</div>	
-						<div class="six columns">
-							<a class="a" href="index.html">isthisnagee</a>
-							<br>
-							<a class="a" href="resume.html">isthisresume</a>
-							<br>
-							<a class="a" href="mailto:nagee.elghassein@mail.utoronto.ca" target="_blank">Contact</a>
-						</div>
+							<div id="music" class="w-100">
+								<div id="album-art"></div>
+								<div id="album-text"></div>
+							</div>
+
+						</section>
 					</div>
 				</div>
-			</nav>
-			<!-- end NAV -->
-
-			<!-- about -->
-			<section class="about">
-				<!-- title -->
-				<div class="row">
-					<div class="four columns">
-						<h3 class="highlight">About</h3>	 
-					</div>	
-				</div>
-				<!-- end title -->
-
-				<div class="row">
-					<div class="six columns">
-						<p>
-						hi i'm <span class="highlight">Nagee</span>, 
-						a developer and student currently working at
-						<a class="a" href="http://smud.org"><span class="smud">SMUD</span></a>. it's pronounced na-jee.
-						you can find me on <a class="a" href="https://twitter.com/isthisnagee"><span class="twitter">twitter</span></a>
-						and <a class="a" href="https://medium.com/@isthisnagee"><span class="medium">medium</span></a> though i tweet once in a 
-						<span class="blue">blue</span>
-						moon and i seem to only write drafts. 
-						i occasionaly post pictures on 
-						<a class="a" href="https://instagram.com/isthisnagee"><span class="instagram">the gram</span></a>.
-						you can even stalk me on <a class="a" href="https://facebook.com/isthisnagee"><span class="facebook">facebook</span></a>.
-						i'll probably be
-						memeing some nodejs stuff on Hackathon Hackers.
-						<span class="highlight">my username/handle/etc is 
-						isthisnagee</span>. it's not very
-						creative but i try to keep it consistent.
-						Also check out me resume (it's linked above)
-						</p>
-
-						<p>also <span class="vim">Vim</span> is better than 
-						<span class="emacs">emacs</span>.</p>
-					</div>	
-				</div>
-			</section>
-			<!-- end about -->
-			
-			<!-- code -->
-			<section class="code">
-				<!-- title -->
-				<div class="row">
-					<div class="four columns">
-						<h3 class="highlight">Code &amp; Projects</h3>
-					</div>	
-				</div>
-				<!-- end title -->
-				
-				<div class="row">
-					<div class="six columns">
-						<p>
-					  as an occasional user of social media (except for chats, for some reason i'm addicted
-						to facebook's messenger, especially the stickers), i have time to write code. 
-						usually it ends up staying in my waste bin (~/Projects/), 
-					  but every one in a while i'll write something that is good enough to put
-					  on 
-						<a class="a" href="http://github.com/isthisnagee"><span class="github">github</span></a>
-						for the world to critique. or i was up at 4am and wasn't thinking 
-						straight and pushed it. that's probably how all my code got there.	
-						</p>
-						<p> the following is the cleanest piece of code i will ever write </p>
-						<pre class="jokes">
-						</pre>
-						<p> see, bug free :D</p>
-					</div>	
-				</div>
-			</section>
-			<!-- end code -->
-
-      <!-- listen -->
-			<section class="listen">
-				<!-- title -->
-				<div class="row">
-					<div class="four columns">
-						<h3 class="highlight">Listening</h3>	 
-					</div>	
-				</div>
-				<!-- end title -->
-				
-				<div class="row">
-					<div class="six columns">
-						<p>this is what i've last played. 
-						   check out my 
-							 <a class="a" href="http://spotify.com/isthisnagee"><span class="spotify">spotify</span></a>
-							 for more.
-						</p>
-					</div>	
-				</div>
-				<div class="row">
-					<div id="album-art" class="one columns">
-						<img src="https://lastfm-img2.akamaized.net/i/u/34s/728667fa86834854c88d6cfd5b7de594.png" alt="album cover"/>
-					</div>
-					<div class="five columns" id="album-text">
-						<p>
-						<span id="album">Acid Rap</span> - <span id="artist">Chance The Rapper</span>
-						</p>
-					</div>
-				</div>
-			</section>
-			<!-- end listen -->
-
-		</div>
-		<!-- end container -->
-
-		<!-- Scripts -->
+			</div>
 		<script src="js/jquery.min.js"></script>
+		<script src="js/colors.js"></script>
 		<script src="js/stuff.js"></script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		
-		  ga('create', 'UA-58131443-2', 'auto');
-		  ga('send', 'pageview');
-		</script>
-		<!-- end Scripts -->
-
 	</body>
 </html>

@@ -1,9 +1,26 @@
 window.onload = function() {
-	var withColors = funcOnData('js/color.json');
-	withColors(changeColors);
+	console.log(colors);
 	var withLastFm = funcOnData('http://159.203.47.33:3000/lastfm/isthisnagee/lastplayed');
+	// var withMedium = funcOnData('http://159.203.47.33:3000/isthismedium/lastpublished');
 	withLastFm(addToFrontEnd);
+	//withMedium(console.log);
+	loadColors();
+	color(2);
 };
+
+function loadColors() {
+  function makeColorDiv(color,i) {
+    var bg = color["background"];
+    return '<div onClick={color(' + i + ')} class="w100 h2 pointer" style="background-color: ' + bg + '"></div>';
+  }
+
+  $('.colors-list').replaceWith(colors
+		.map(makeColorDiv)
+		.reduce(function(a,b) { 
+			return a + b;
+		})
+	);
+}
 
 
 function funcOnData(url) {
@@ -28,32 +45,52 @@ function addToFrontEnd(lastfm) {
   var albumName = lastfm['album']['#text'];
 	var songName = lastfm['name'];
 	var artistName = lastfm['artist']['#text'];
-  var albumArtLink = lastfm['image'][0]; 	
-	console.log('albumArtLink', albumArtLink);
+  var albumArtLink = lastfm['image'][0]['#text']; 	
 
-	var albumNameText = albumName 
-		? '<span id="album-name">album: ' + albumName + '</span>' 
-		: '';
-	var songNameText = songName
-	  ? '<span id="song-name">song:&nbsp;&nbsp;' + songName + '</span>'
-	  : '';
-	var artistNameText = artistName
-	  ? '<span id="arist-name">&nbsp;&nbsp;' + artistName + '</span>'
-	  : '';
-	var albumArtUrl = albumArtLink
-	  ? '<img src="' + albumArtLink['#text'] + '" alt="album cover" />'
-    : '';	
-
-  var albumText = songNameText && albumNameText && artistNameText 
-		? albumText = artistNameText + '<br>' + songNameText + '<br>' + albumNameText
-	  : albumText = artistNameText + ':' + songNameText;
-
+  var music = '<div class="dib mw5 black"> <img class="db w3 h3 ba b--black-10" alt="album cover" src="' + albumArtLink + '">  <dl class="mt2 f6 lh-copy"> <dt class="clip">Title</dt> <dd class="ml0 fw9 color-text--accent-light">' + songName + '</dd> <dt class="clip">Artist</dt> <dd class="ml0 gray color-text ">' + artistName + '</dd> </dl></div>';
 	// put in html
-	albumTextDiv.replaceWith(albumText);
-	albumArtDiv.replaceWith(albumArtUrl);
+    $('#music').replaceWith(music);
+
 }
 
 
+function color(i) {
+  var colorScheme = colors[i];
+
+		var background = colorScheme["background"];
+		var dark       = colorScheme["dark"];
+		var text       = colorScheme["text"];
+		var accentLight= colorScheme["accentLight"];
+		var accentDark = colorScheme["accentDark"];
+		var highlight  = colorScheme["highlight"];
+
+		$('.color-text').css('color', text);
+        $('.color-text--highlight').css('color', highlight);
+		$('.color-bg').css('background-color', background);
+        $('.color-text--accent-light').css('color', accentLight);
+		$('.color-underline').css('border-color', highlight);
+        $('.color-link').css('border-color', accentLight);
+		$('.color-date').css('background-color', accentLight);
+		$('.color-position').css('background-color', highlight);
+		$('.color-entry').css('border-color', dark);
+		$('.color-highlight').css('border-color',  highlight);
+		$('.color-jokes').css('background-color ', accentDark);
+
+		$('#current .highlight').css('border-color', dark);
+		$('.color-a').css('border-color', accentLight);
+		$('.color-a').css('color', text);
+
+		$('a').hover(
+			function() { 
+				$(this).css('background-color', accentDark);
+				$(this).css('color', accentLight);
+			}, 
+			function() {
+				$(this).css('color', text);
+				$(this).css('background-color', 'transparent');
+			}
+		);
+}
 
 function changeColors(jsonColors){
 	console.log('changing colors');
