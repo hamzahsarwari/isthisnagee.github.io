@@ -11,7 +11,7 @@ window.onload = function() {
 function loadColors() {
   function makeColorDiv(color,i) {
     var bg = color["background"];
-    return '<div onClick={color(' + i + ')} class="w100 h2 pointer" style="background-color: ' + bg + '"></div>';
+    return '<div onClick={color(' + i + ')} class="w2 bt bb bw2 h2 pointer" style="background-color: ' + bg + '"></div>';
   }
 
   $('.colors-list').replaceWith(colors
