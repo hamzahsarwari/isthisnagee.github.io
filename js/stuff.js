@@ -5,7 +5,7 @@ window.onload = function() {
 	withLastFm(addToFrontEnd);
 	//withMedium(console.log);
 	loadColors();
-	color(2);
+	color(11);
 };
 
 function loadColors() {
