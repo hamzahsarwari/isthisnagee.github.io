@@ -33,12 +33,12 @@ var colors = [
 			highlight: navy 
 		},
 		{ // TODO
-			text: purple,
+			text: navy,
 			background: orange,
 			dark: black,
 			accentLight: maroon,
 			accentDark: navy,
-			highlight: blue 
+			highlight: navy 
 		},	
 		{
 			text: purple,

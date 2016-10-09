@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Space+Mono";
 
-* {
+.space-mono {
 	font-family: 'Space Mono', monospace;
 }
 cf:before, .cf:after {
