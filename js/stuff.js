@@ -1,13 +1,22 @@
 window.onload = function() {
-	console.log(colors);
 	var withLastFm = funcOnData('http://159.203.47.33:3000/lastfm/isthisnagee/lastplayed');
 	// var withMedium = funcOnData('http://159.203.47.33:3000/isthismedium/lastpublished');
 	withLastFm(addToFrontEnd);
 	//withMedium(console.log);
 	loadColors();
 	color(11);
+  collapse();
 };
 
+function collapse() {
+  var collapsible = $('.collapse');
+  for (var i = 0; i < collapsible.length; i++) {
+    $section = $(collapsible[i]);
+    $section.click(function() {
+      $section.find('.collapse--this').hide();
+    });
+  }
+}
 function loadColors() {
   function makeColorDiv(color,i) {
     var bg = color["background"];

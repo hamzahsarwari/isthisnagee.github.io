@@ -15,6 +15,8 @@ var white = '#fff';
 var gray = '#aaa';
 var silver = '#ddd';
 var black = '#111';
+var blackblack = '#000';
+var lightGray = '#959595';
 var colors = [
 		{
 			text: "#f8f8f2",
@@ -104,6 +106,14 @@ var colors = [
 			accentDark:  black,
 			highlight: purple 	
 		},
+    {
+			text: black, 
+			background: white,
+			dark: silver,
+			accentLight: lightGray,
+			accentDark:  gray,
+			highlight: blackblack 
+    },
 		{
 			text: navy, 
 			background: silver,
