@@ -37,7 +37,7 @@ const getDataThen = url => {
 
 const loadColors = () => {
   const makeColor = (color,i) => {
-    var bg = color["background"];
+    var bg = color["background"]
     return `<div onClick={color(${i})} 
                  class="w2 bt bb bw2 h2 pointer" 
                  style="background-color: ${bg}"></div>`
@@ -47,60 +47,60 @@ const loadColors = () => {
     colors
       .map(makeColor)
       .reduce(function(a,b) { 
-        return a + b;
+        return a + b
       })
   )
 }
 function color(i) {
-  const colorScheme = colors[i];
+  const colorScheme = colors[i]
 
-  const background = colorScheme["background"];
-  const dark       = colorScheme["dark"];
-  const text       = colorScheme["text"];
-  const accentLight= colorScheme["accentLight"];
-  const accentDark = colorScheme["accentDark"];
-  const highlight  = colorScheme["highlight"];
+  const background = colorScheme["background"]
+  const dark       = colorScheme["dark"]
+  const text       = colorScheme["text"]
+  const accentLight= colorScheme["accentLight"]
+  const accentDark = colorScheme["accentDark"]
+  const highlight  = colorScheme["highlight"]
 
   $('.color-text')
-    .css('color', text);
+    .css('color', text)
   $('.color-text--highlight')
-    .css('color', highlight);
+    .css('color', highlight)
   $('.color-bg')
-    .css('background-color', background);
+    .css('background-color', background)
   $('.color-text--accent-light')
-    .css('color', accentLight);
+    .css('color', accentLight)
   $('.color-underline')
-    .css('border-color', highlight);
+    .css('border-color', highlight)
   $('.color-link')
-    .css('border-color', accentLight);
+    .css('border-color', accentLight)
   $('.color-date')
-    .css('background-color', accentLight);
+    .css('background-color', accentLight)
   $('.color-position')
-    .css('background-color', highlight);
+    .css('background-color', highlight)
   $('.color-entry')
-    .css('border-color', dark);
+    .css('border-color', dark)
   $('.color-highlight')
-    .css('border-color',  highlight);
+    .css('border-color',  highlight)
   $('.color-jokes')
-    .css('background-color ', accentDark);
+    .css('background-color ', accentDark)
 
   $('#current .highlight')
-    .css('border-color', dark);
+    .css('border-color', dark)
   $('.color-a')
-    .css('border-color', accentLight);
+    .css('border-color', accentLight)
   $('.color-a')
-    .css('color', text);
+    .css('color', text)
 
   $('a').hover(
     () => { 
-      $(this).css('background-color', accentDark);
-      $(this).css('color', accentLight);
+      $(this).css('background-color', accentDark)
+      $(this).css('color', accentLight)
     }, 
     () => {
-      $(this).css('color', text);
-      $(this).css('background-color', 'transparent');
+      $(this).css('color', text)
+      $(this).css('background-color', 'transparent')
     }
-  );
+  )
 }
 
 
