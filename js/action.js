@@ -1,3 +1,7 @@
+/*
+ * Takes a json object `lastfm` and adds the data in it to
+ * the html
+ */
 const addSong = (lastfm) => {
   // get jqeury stuff
   const albumTextDiv = $('#album-text')
@@ -6,7 +10,7 @@ const addSong = (lastfm) => {
   const albumName = lastfm['album']['#text']
   const songName = lastfm['name']
   const artistName = lastfm['artist']['#text']
-  const albumArtLink = lastfm['image'][0]['#text'] 	
+  const albumArtLink = lastfm['image'][0]['#text']
 
   const music = `
       <div class="dib mw5 black">
@@ -23,34 +27,38 @@ const addSong = (lastfm) => {
   $('#music').replaceWith(music)
 }
 
+/*
+ * Takes a url `url`, gets the json data it gives,
+ * and returns a function that acts on that data
+ */
 const getDataThen = url => {
   return dataFunc => {
-		$.ajax({
-			dataType: "json",
-			url: url,
-			success: data => {
-				dataFunc(data)
-			}
-		})
-	}
+    $.ajax({
+      dataType: "json",
+      url: url,
+      success: data => {
+        dataFunc(data)
+      }
+    })
+  }
 }
 
-const loadColors = () => {
+const loadColors = (colors) => {
   const makeColor = (color,i) => {
     var bg = color["background"]
-    return `<div onClick={color(${i})} 
-                 class="w2 bt bb bw2 h2 pointer" 
+    return `<div onClick={color(${i})}
+                 class="w2 bt bb bw2 h2 pointer"
                  style="background-color: ${bg}"></div>`
   }
 
-  $('.colors-list').replaceWith(
+  $('.colors-list')
+    .replaceWith(
     colors
       .map(makeColor)
-      .reduce(function(a,b) { 
-        return a + b
-      })
+      .reduce((a,b) => a + b)
   )
 }
+
 function color(i) {
   const colorScheme = colors[i]
 
@@ -92,10 +100,10 @@ function color(i) {
     .css('color', text)
 
   $('a').hover(
-    () => { 
+    () => {
       $(this).css('background-color', accentDark)
       $(this).css('color', accentLight)
-    }, 
+    },
     () => {
       $(this).css('color', text)
       $(this).css('background-color', 'transparent')
@@ -105,25 +113,29 @@ function color(i) {
 
 
 window.onload = () => {
-  const url = 'http://159.203.47.33:3000/lastfm/isthisnagee/lastplayed' 
-  
-  // add song
+  const url = 'http://159.203.47.33:3000/lastfm/isthisnagee/lastplayed'
 
-  try { // not all browsers support fetch. Try to use it.
+  /* add song */
+
+  // not all browsers support fetch. Try to use it.
+  try {
     fetch(url)
       .then(data => data.json())
       .then(json => addSong(json))
       .catch(err => console.log('could not get recently played'))
-  } catch (err) {
+  }
+  // this browser doesn't support fetch, use the old method
+  catch (err) {
     getDataThen(url)(addSong)
   }
 
-  // add colors
+  /* add colors */
 
+  // `colors` is a list located at colors.js
   // add the color bar
-  loadColors()
+  loadColors(colors)
 
   // set the default color
-  color(11) 
+  color(11)
 
 }
