@@ -44,8 +44,8 @@ const getDataThen = url => {
 }
 
 const loadColors = (colors) => {
-  const makeColor = (color,i) => {
-    var bg = color["background"]
+  const makeColor = (color, i) => {
+    var bg = color['background']
     return `<div onClick={color(${i})}
                  class="w2 bt bb bw2 h2 pointer"
                  style="background-color: ${bg}"></div>`
@@ -55,19 +55,19 @@ const loadColors = (colors) => {
     .replaceWith(
     colors
       .map(makeColor)
-      .reduce((a,b) => a + b)
+      .reduce((a, b) => a + b)
   )
 }
 
 function color(i) {
   const colorScheme = colors[i]
 
-  const background = colorScheme["background"]
-  const dark       = colorScheme["dark"]
-  const text       = colorScheme["text"]
-  const accentLight= colorScheme["accentLight"]
-  const accentDark = colorScheme["accentDark"]
-  const highlight  = colorScheme["highlight"]
+  const background = colorScheme['background']
+  const dark = colorScheme['dark']
+  const text = colorScheme['text']
+  const accentLight = colorScheme['accentLight']
+  const accentDark = colorScheme['accentDark']
+  const highlight = colorScheme['highlight']
 
   $('.color-text')
     .css('color', text)
@@ -83,7 +83,7 @@ function color(i) {
     .css('border-color', accentLight)
   $('.color-date')
     .css('background-color', accentLight)
-  $('.color-position')
+  $('.color-bg-highlight')
     .css('background-color', highlight)
   $('.color-entry')
     .css('border-color', dark)
