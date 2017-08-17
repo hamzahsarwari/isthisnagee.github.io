@@ -115,14 +115,15 @@ window.onload = () => {
   color(11);
   // get prev state
   // add hover temporarily
-  $(".nagee-me")
-    .mouseenter(function() {
-      const $this = $(this);
-      const text = $this.attr("data-text");
-      const bg = $this.attr("data-bg");
-      changeColor(text, bg);
-    })
-    .mouseleave(function() {
-      changeColor(prevColor.text, prevColor.bg);
-    });
+  // THE BELOW IS REALLY ANNOYING: changing color on hover
+  // $(".nagee-me")
+  //   .mouseenter(function() {
+  //     const $this = $(this);
+  //     const text = $this.attr("data-text");
+  //     const bg = $this.attr("data-bg");
+  //     changeColor(text, bg);
+  //   })
+  //   .mouseleave(function() {
+  //     changeColor(prevColor.text, prevColor.bg);
+  //   });
 };
