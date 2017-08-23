@@ -105,8 +105,18 @@ function changeColor(text, bg) {
 window.onload = () => {
 
   // ya ok my api key is public boo hoo
-  const recentTracks = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=isthisnagee&api_key=99b3bff8e3eb1ef3d73429f2123f7e4d&format=json';
-  getDataFrom(recentTracks).then(addSong);
+  const apiKey = 'api_key=99b3bff8e3eb1ef3d73429f2123f7e4d';
+
+  // also this url is long af make it "short"
+  const format = 'format=json';
+  const user = 'user=isthisnagee';
+  const method='method=user.getrecenttracks';
+  const apiBase = 'http://ws.audioscrobbler.com/2.0'
+  const recentTracksUrl = `${apiBase}/?${method}&${user}&${apiKey}&${format}` 
+
+  // i like the way this reads
+  getDataFrom(recentTracksUrl).then(addSong);
+
   // `colors` is a list located at colors.js
   // add the color bar
   loadColors(colors);
