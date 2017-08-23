@@ -18,14 +18,14 @@ const addSong = lastfm => {
 
   const music = `
   <a href="${songLink}">
-      <div class="dib mw5 black">
+      <div class="dib mw5">
         <img class="db w3 h3 ba b--black-10" alt="album cover"
                          src="${albumArtLink}">
         <dl class="mt2 f6 lh-copy">
           <dt class="clip">Title</dt>
-          <dd class="ml0 f29 color-text--accent-light">${songName}</dd>
+          <dd class="ml0 nagee">${songName}</dd>
           <dt class="clip">Artist</dt>
-          <dd class="ml0 gray color-text">${artistName}</dd>
+          <dd class="ml0 nagee">${artistName}</dd>
         </dl>
       </div>
       </a>
