@@ -3,9 +3,9 @@
  * the html
  */
 const addSong = lastfm => {
-  console.log('lastfm', lastfm);
+  console.log("lastfm", lastfm);
   const tracks = lastfm.recenttracks.track;
-  const latest = tracks[0]
+  const latest = tracks[0];
   // get jqeury stuff
   const albumTextDiv = $("#album-text");
   const albumArtDiv = $("#album-art");
@@ -103,16 +103,15 @@ function changeColor(text, bg) {
 }
 
 window.onload = () => {
-
   // ya ok my api key is public boo hoo
-  const apiKey = 'api_key=99b3bff8e3eb1ef3d73429f2123f7e4d';
+  const apiKey = "api_key=99b3bff8e3eb1ef3d73429f2123f7e4d";
 
   // also this url is long af make it "short"
-  const format = 'format=json';
-  const user = 'user=isthisnagee';
-  const method='method=user.getrecenttracks';
-  const apiBase = 'http://ws.audioscrobbler.com/2.0'
-  const recentTracksUrl = `${apiBase}/?${method}&${user}&${apiKey}&${format}` 
+  const format = "format=json";
+  const user = "user=isthisnagee";
+  const method = "method=user.getrecenttracks";
+  const apiBase = "https://ws.audioscrobbler.com/2.0";
+  const recentTracksUrl = `${apiBase}/?${method}&${user}&${apiKey}&${format}`;
 
   // i like the way this reads
   getDataFrom(recentTracksUrl).then(addSong);
