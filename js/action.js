@@ -1,28 +1,23 @@
-// function getA11yColor(rgb) {
-//   const r = rgb.r; const g = rgb.g; const b = rgb.b
-//   const a = [r, g, b].map(v => v / 255 < 0.03928 ? v / 12.92 : Math.pow(
-// }
-
-// yay a global :(
-let prevColor = {
-  text: "black",
-  bg: "white"
-};
 /*
  * Takes a json object `lastfm` and adds the data in it to
  * the html
  */
 const addSong = lastfm => {
+  console.log('lastfm', lastfm);
+  const tracks = lastfm.recenttracks.track;
+  const latest = tracks[0]
   // get jqeury stuff
   const albumTextDiv = $("#album-text");
   const albumArtDiv = $("#album-art");
 
-  const albumName = lastfm["album"]["#text"];
-  const songName = lastfm["name"];
-  const artistName = lastfm["artist"]["#text"];
-  const albumArtLink = lastfm["image"][0]["#text"];
+  const albumName = latest["album"]["#text"];
+  const songName = latest["name"];
+  const artistName = latest["artist"]["#text"];
+  const albumArtLink = latest["image"][0]["#text"];
+  const songLink = latest["url"];
 
   const music = `
+  <a href="${songLink}">
       <div class="dib mw5 black">
         <img class="db w3 h3 ba b--black-10" alt="album cover"
                          src="${albumArtLink}">
@@ -33,6 +28,7 @@ const addSong = lastfm => {
           <dd class="ml0 gray color-text">${artistName}</dd>
         </dl>
       </div>
+      </a>
   `;
   $("#music").replaceWith(music);
 };
@@ -41,15 +37,17 @@ const addSong = lastfm => {
  * Takes a url `url`, gets the json data it gives,
  * and returns a function that acts on that data
  */
-const getDataThen = url => {
-  return dataFunc => {
-    $.ajax({
-      dataType: "json",
-      url: url,
-      success: data => {
-        dataFunc(data);
-      }
-    });
+const getDataFrom = url => {
+  return {
+    then: dataFunc => {
+      $.ajax({
+        dataType: "json",
+        url: url,
+        success: data => {
+          dataFunc(data);
+        }
+      });
+    }
   };
 };
 
@@ -97,8 +95,6 @@ function color(i) {
   }
 
   changeColor(text, bg);
-  prevColor.text = text;
-  prevColor.bg = bg;
 }
 
 function changeColor(text, bg) {
@@ -107,23 +103,14 @@ function changeColor(text, bg) {
 }
 
 window.onload = () => {
+
+  // ya ok my api key is public boo hoo
+  const recentTracks = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=isthisnagee&api_key=99b3bff8e3eb1ef3d73429f2123f7e4d&format=json';
+  getDataFrom(recentTracks).then(addSong);
   // `colors` is a list located at colors.js
   // add the color bar
   loadColors(colors);
 
   // set the default color
   color(11);
-  // get prev state
-  // add hover temporarily
-  // THE BELOW IS REALLY ANNOYING: changing color on hover
-  // $(".nagee-me")
-  //   .mouseenter(function() {
-  //     const $this = $(this);
-  //     const text = $this.attr("data-text");
-  //     const bg = $this.attr("data-bg");
-  //     changeColor(text, bg);
-  //   })
-  //   .mouseleave(function() {
-  //     changeColor(prevColor.text, prevColor.bg);
-  //   });
 };
