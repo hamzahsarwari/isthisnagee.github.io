@@ -141,7 +141,14 @@ const add1Song = addSongs(1, false);
 window.onload = () => {
   const add1Song = addSongs(1, false);
   // i like the way this reads
-  getDataFrom(recentTracksUrl).then(add1Song);
+  const add1SongAndButton = data => {
+    add1Song(data);
+    $("#msc").append([
+      `<button class="ml2 mt2 nagee bg--nagee" id="more-or-less">more ...</button>`,
+    ]);
+    $(__button).click(toggleMoreOrLess());
+  };
+  getDataFrom(recentTracksUrl).then(add1SongAndButton);
 
   // `colors` is a list located at colors.js
   // add the color bar
@@ -149,7 +156,6 @@ window.onload = () => {
 
   // set the default color
   color(11);
-  $(__button).click(toggleMoreOrLess());
 };
 
 function toggleMoreOrLess() {
