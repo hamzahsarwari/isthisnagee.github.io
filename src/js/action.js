@@ -1,10 +1,9 @@
+let currentColors;
 /*
  * Takes a json object `lastfm` and adds the data in it to
  * the html
  */
-const addSongs = (numSongs = 12) => lastfm => {
-  console.log(lastfm);
-  console.log("lastfm", lastfm);
+const addSongs = (numSongs = 12, border = true) => lastfm => {
   const tracks = lastfm.recenttracks.track;
   const artistNameAndMusicDivs = tracks.slice(0, numSongs).map(song => {
     // get jqeury stuff
@@ -16,14 +15,14 @@ const addSongs = (numSongs = 12) => lastfm => {
     const artistName = song["artist"]["#text"];
     const albumArtLink = song["image"][0]["#text"];
     const songLink = song["url"];
-
+    const ba = border ? "ba" : "";
     const music = `
       <div class="w4 dib">
       <a href="${songLink}">
       <img class="db w3 h3 ba b--black-10" alt="album cover"
     src="${albumArtLink}">
       </a>
-      <dl class="mt2 f6 lh-copy ba pa1">
+      <dl class="mt2 f6 lh-copy ${ba} pa1">
       <dt class="clip">Title</dt>
       <dd class="ml0 nagee">${songName}</dd>
       </dl>
@@ -44,9 +43,10 @@ const addSongs = (numSongs = 12) => lastfm => {
 
   const divs = groupedArtistsToMusicDiv.map(artistToDiv => {
     const { name, divs } = artistToDiv;
+    const bb = border ? "bb" : "";
     const artistDiv = `<div><dl><dt class="clip">Artist</dt>
-      <dd class="ml0 helvetica nagee">${name}</dd></dl></div>`;
-    return `<div class="bb w-100">${artistDiv}${divs.join(" ")}</div>`;
+      <dd class="ml0 nagee">${name}</dd></dl></div>`;
+    return `<div class="${bb} w-100">${artistDiv}${divs.join(" ")}</div>`;
   });
 
   $("#music").append(divs);
@@ -56,13 +56,17 @@ const addSongs = (numSongs = 12) => lastfm => {
  * Takes a url `url`, gets the json data it gives,
  * and returns a function that acts on that data
  */
+
+let __cache;
 const getDataFrom = url => {
+  if (__cache) return { then: dataFunc => dataFunc(__cache) };
   return {
     then: dataFunc => {
       $.ajax({
         dataType: "json",
         url: url,
         success: data => {
+          __cache = data;
           dataFunc(data);
         },
       });
@@ -98,7 +102,8 @@ const loadColors = colors => {
                  data-accent-dark="gray"
                  style="background-color: white"></div>`;
 
-  $(".color-list").replaceWith([defaultColors, ...colors.map(makeColor)].reduce((a, b) => a + b));
+  const colorList = [defaultColors, ...colors.map(makeColor)].reduce((a, b) => a + b);
+  $(".color-list").replaceWith(colorList);
 };
 
 function color(i) {
@@ -111,7 +116,8 @@ function color(i) {
     text = colorScheme["text"];
   }
 
-  changeColor(text, bg);
+  currentColors = () => changeColor(text, bg);
+  currentColors();
 }
 
 function changeColor(text, bg) {
@@ -119,20 +125,23 @@ function changeColor(text, bg) {
   $(".bg--nagee").css("background-color", bg);
 }
 
+// ya ok my api key is public boo hoo
+const apiKey = "api_key=99b3bff8e3eb1ef3d73429f2123f7e4d";
+
+// also this url is long af make it "short"
+const format = "format=json";
+const user = "user=isthisnagee";
+const method = "method=user.getrecenttracks";
+const apiBase = "https://ws.audioscrobbler.com/2.0";
+const recentTracksUrl = `${apiBase}/?${method}&${user}&${apiKey}&${format}`;
+
+const __button = "#more-or-less";
+const add20Songs = addSongs(20);
+const add1Song = addSongs(1, false);
 window.onload = () => {
-  // ya ok my api key is public boo hoo
-  const apiKey = "api_key=99b3bff8e3eb1ef3d73429f2123f7e4d";
-
-  // also this url is long af make it "short"
-  const format = "format=json";
-  const user = "user=isthisnagee";
-  const method = "method=user.getrecenttracks";
-  const apiBase = "https://ws.audioscrobbler.com/2.0";
-  const recentTracksUrl = `${apiBase}/?${method}&${user}&${apiKey}&${format}`;
-
-  const add20Songs = addSongs(20);
+  const add1Song = addSongs(1, false);
   // i like the way this reads
-  getDataFrom(recentTracksUrl).then(add20Songs);
+  getDataFrom(recentTracksUrl).then(add1Song);
 
   // `colors` is a list located at colors.js
   // add the color bar
@@ -140,4 +149,27 @@ window.onload = () => {
 
   // set the default color
   color(11);
+  $(__button).click(toggleMoreOrLess());
 };
+
+function toggleMoreOrLess() {
+  let more = true;
+  return function() {
+    if (more) {
+      more = false;
+      $("#music").empty();
+      getDataFrom(recentTracksUrl).then(add20Songs);
+      $(__button).text("less ...");
+    } else {
+      more = true;
+      $("#music").empty();
+      getDataFrom(recentTracksUrl).then(add1Song);
+      $(__button).text("more ...");
+    }
+    currentColors();
+  };
+}
+
+function getOneSong() {
+  console.log("one");
+}
