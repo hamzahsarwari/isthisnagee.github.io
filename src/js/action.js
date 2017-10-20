@@ -2,35 +2,54 @@
  * Takes a json object `lastfm` and adds the data in it to
  * the html
  */
-const addSong = lastfm => {
+const addSongs = (numSongs = 12) => lastfm => {
+  console.log(lastfm);
   console.log("lastfm", lastfm);
   const tracks = lastfm.recenttracks.track;
-  const latest = tracks[0];
-  // get jqeury stuff
-  const albumTextDiv = $("#album-text");
-  const albumArtDiv = $("#album-art");
+  const artistNameAndMusicDivs = tracks.slice(0, numSongs).map(song => {
+    // get jqeury stuff
+    const albumTextDiv = $("#album-text");
+    const albumArtDiv = $("#album-art");
 
-  const albumName = latest["album"]["#text"];
-  const songName = latest["name"];
-  const artistName = latest["artist"]["#text"];
-  const albumArtLink = latest["image"][0]["#text"];
-  const songLink = latest["url"];
+    const albumName = song["album"]["#text"];
+    const songName = song["name"];
+    const artistName = song["artist"]["#text"];
+    const albumArtLink = song["image"][0]["#text"];
+    const songLink = song["url"];
 
-  const music = `
-  <a href="${songLink}">
-      <div class="dib mw5">
-        <img class="db w3 h3 ba b--black-10" alt="album cover"
-                         src="${albumArtLink}">
-        <dl class="mt2 f6 lh-copy">
-          <dt class="clip">Title</dt>
-          <dd class="ml0 nagee">${songName}</dd>
-          <dt class="clip">Artist</dt>
-          <dd class="ml0 nagee">${artistName}</dd>
-        </dl>
-      </div>
+    const music = `
+      <div class="w4 dib">
+      <a href="${songLink}">
+      <img class="db w3 h3 ba b--black-10" alt="album cover"
+    src="${albumArtLink}">
       </a>
-  `;
-  $("#music").replaceWith(music);
+      <dl class="mt2 f6 lh-copy ba pa1">
+      <dt class="clip">Title</dt>
+      <dd class="ml0 nagee">${songName}</dd>
+      </dl>
+      </div>
+      `;
+    return { artistName, music };
+  });
+
+  const groupedArtistsToMusicDiv = artistNameAndMusicDivs.reduce((artists, artistNameDiv) => {
+    const { artistName, music } = artistNameDiv;
+    const idxOfArtist = artists.findIndex(artist => artist.name === artistName);
+
+    if (idxOfArtist > -1) artists[idxOfArtist].divs.push(music);
+    else artists.push({ name: artistName, divs: [music] });
+
+    return artists;
+  }, []);
+
+  const divs = groupedArtistsToMusicDiv.map(artistToDiv => {
+    const { name, divs } = artistToDiv;
+    const artistDiv = `<div><dl><dt class="clip">Artist</dt>
+      <dd class="ml0 helvetica nagee">${name}</dd></dl></div>`;
+    return `<div class="bb w-100">${artistDiv}${divs.join(" ")}</div>`;
+  });
+
+  $("#music").append(divs);
 };
 
 /*
@@ -45,9 +64,9 @@ const getDataFrom = url => {
         url: url,
         success: data => {
           dataFunc(data);
-        }
+        },
       });
-    }
+    },
   };
 };
 
@@ -79,9 +98,7 @@ const loadColors = colors => {
                  data-accent-dark="gray"
                  style="background-color: white"></div>`;
 
-  $(".color-list").replaceWith(
-    [defaultColors, ...colors.map(makeColor)].reduce((a, b) => a + b)
-  );
+  $(".color-list").replaceWith([defaultColors, ...colors.map(makeColor)].reduce((a, b) => a + b));
 };
 
 function color(i) {
@@ -113,8 +130,9 @@ window.onload = () => {
   const apiBase = "https://ws.audioscrobbler.com/2.0";
   const recentTracksUrl = `${apiBase}/?${method}&${user}&${apiKey}&${format}`;
 
+  const add20Songs = addSongs(20);
   // i like the way this reads
-  getDataFrom(recentTracksUrl).then(addSong);
+  getDataFrom(recentTracksUrl).then(add20Songs);
 
   // `colors` is a list located at colors.js
   // add the color bar
