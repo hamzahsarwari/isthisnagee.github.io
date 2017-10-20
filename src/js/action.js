@@ -169,7 +169,3 @@ function toggleMoreOrLess() {
     currentColors();
   };
 }
-
-function getOneSong() {
-  console.log("one");
-}
