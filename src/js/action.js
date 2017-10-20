@@ -143,9 +143,8 @@ window.onload = () => {
   // i like the way this reads
   const add1SongAndButton = data => {
     add1Song(data);
-    $("#msc").append([
-      `<button class="ml2 mt2 nagee bg--nagee" id="more-or-less">more ...</button>`,
-    ]);
+    // make the button visible
+    $(__button).removeClass('dn');
     $(__button).click(toggleMoreOrLess());
   };
   getDataFrom(recentTracksUrl).then(add1SongAndButton);
