@@ -28,15 +28,17 @@ const addSongs = (numSongs = 12, border = true) => lastfm => {
       </dl>
       </div>
       `;
-    return { artistName, music };
+    return { artistName, music, songName };
   });
 
   const groupedArtistsToMusicDiv = artistNameAndMusicDivs.reduce((artists, artistNameDiv) => {
-    const { artistName, music } = artistNameDiv;
+    const { artistName, music, songName } = artistNameDiv;
     const idxOfArtist = artists.findIndex(artist => artist.name === artistName);
 
-    if (idxOfArtist > -1) artists[idxOfArtist].divs.push(music);
-    else artists.push({ name: artistName, divs: [music] });
+    if (idxOfArtist > -1) {
+      const songExists = artists[idxOfArtist].songs.find(song => song === songName);
+      if (songExists) artists[idxOfArtist].divs.push(music);
+    } else artists.push({ name: artistName, divs: [music], songs: [songName] });
 
     return artists;
   }, []);
@@ -144,7 +146,7 @@ window.onload = () => {
   const add1SongAndButton = data => {
     add1Song(data);
     // make the button visible
-    $(__button).removeClass('dn');
+    $(__button).removeClass("dn");
     $(__button).click(toggleMoreOrLess());
   };
   getDataFrom(recentTracksUrl).then(add1SongAndButton);
