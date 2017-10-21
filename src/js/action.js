@@ -37,7 +37,7 @@ const addSongs = (numSongs = 12, border = true) => lastfm => {
 
     if (idxOfArtist > -1) {
       const songExists = artists[idxOfArtist].songs.find(song => song === songName);
-      if (songExists) artists[idxOfArtist].divs.push(music);
+      if (!songExists) artists[idxOfArtist].divs.push(music);
     } else artists.push({ name: artistName, divs: [music], songs: [songName] });
 
     return artists;
