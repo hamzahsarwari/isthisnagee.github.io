@@ -5,6 +5,7 @@ let currentColors;
  */
 const addSongs = (numSongs = 12, border = true) => lastfm => {
   const tracks = lastfm.recenttracks.track;
+  console.log(tracks);
   const artistNameAndMusicDivs = tracks.map(song => {
     // get jqeury stuff
     const albumTextDiv = $("#album-text");
@@ -32,7 +33,6 @@ const addSongs = (numSongs = 12, border = true) => lastfm => {
   });
   let totalSongs = 0;
   const groupedArtistsToMusicDiv = artistNameAndMusicDivs.reduce((artists, artistNameDiv) => {
-    console.log(artistNameDiv);
     if (totalSongs === numSongs) return artists;
     const { artistName, music, songName } = artistNameDiv;
     const idxOfArtist = artists.findIndex(artist => artist.name === artistName);
