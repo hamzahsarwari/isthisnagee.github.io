@@ -5,7 +5,7 @@ let currentColors;
  */
 const addSongs = (numSongs = 12, border = true) => lastfm => {
   const tracks = lastfm.recenttracks.track;
-  const artistNameAndMusicDivs = tracks.slice(0, numSongs).map(song => {
+  const artistNameAndMusicDivs = tracks.map(song => {
     // get jqeury stuff
     const albumTextDiv = $("#album-text");
     const albumArtDiv = $("#album-art");
@@ -30,16 +30,22 @@ const addSongs = (numSongs = 12, border = true) => lastfm => {
       `;
     return { artistName, music, songName };
   });
-
+  let totalSongs = 0;
   const groupedArtistsToMusicDiv = artistNameAndMusicDivs.reduce((artists, artistNameDiv) => {
+    console.log(artistNameDiv);
+    if (totalSongs === numSongs) return artists;
     const { artistName, music, songName } = artistNameDiv;
     const idxOfArtist = artists.findIndex(artist => artist.name === artistName);
 
     if (idxOfArtist > -1) {
       const songExists = artists[idxOfArtist].songs.find(song => song === songName);
-      if (!songExists) artists[idxOfArtist].divs.push(music);
-    } else artists.push({ name: artistName, divs: [music], songs: [songName] });
-
+      if (!songExists) {
+        artists[idxOfArtist].divs.push(music);
+        artists[idxOfArtist].songs.push(songName);
+        totalSongs += 1;
+      }
+    } else
+      (totalSongs += 1) && artists.push({ name: artistName, divs: [music], songs: [songName] });
     return artists;
   }, []);
 
