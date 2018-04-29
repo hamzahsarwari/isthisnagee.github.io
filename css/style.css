@@ -50,15 +50,14 @@ a { color: blue; }
   justify-content: space-evenly; align-items: center;
 }
 
-.nav a, .nav [role="button"] {
+.nav a  {
   background-color: pink;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
   color: blue;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 0.2rem;
 }
 
 .at-link:before { content: "@"; }
