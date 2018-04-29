@@ -1,4 +1,10 @@
-* { font-family: sans-serif; font-size: 16px; }
+body { 
+  font-family: sans-serif; 
+  font-size: 1em;
+  line-height: 1.5;
+  line-height: 1.25;
+}
+
 a { color: blue; }
 
 .page-title {
@@ -16,6 +22,7 @@ a { color: blue; }
   width: 100%;
   flex-direction: column-reverse;
 }
+
 .music {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -90,7 +97,7 @@ a { color: blue; }
   text-overflow: ellipsis;
 }
 
-/* LARGE SCREENS */
+/* SCREENS */
 
 @media screen and (min-width: 60em) {
   .flex-container {
@@ -107,7 +114,7 @@ a { color: blue; }
     flex-direction: column;
     width: 46%
   }
-  .intro p { font-size: 18px; }
+  .intro p { font-size: 1.1em; }
   .block {
   }
 
@@ -156,6 +163,16 @@ a { color: blue; }
     text-overflow: ellipsis;
   }
 }
+@media screen and (min-width 85.375em) {
+  body { font-size: 1.3rem; }
+}
+@media screen and (min-width 160em) {
+  body { font-size: 1.4rem; }
+}
+@media screen and (min-width 120em) {
+  body { font-size: 1.6rem; }
+}
+
 
 /* NOT MY CSS :)
  * TODO: link
