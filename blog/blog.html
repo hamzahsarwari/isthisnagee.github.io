@@ -4,110 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>isthisnagee</title>
-    <link rel="stylesheet" href="../src/css/tachyons.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8">
     <link rel="shortcut icon" href="../src/favicon.ico" />
   </head>
-  <body class="courier bg--nagee">
-    <div class="pl3">
-      <header>
-        <h1 class="nagee">
-          isthisnagee / blog
-        </h1>
-        <div class="overflow-x-s pb3">
-          <div class="color-list"></div>
-        </div>
-      </header>
-      <nav>
-        <div class="nowrap overflow-x-auto">
-          <a class="nagee f5 f4-ns dib mr3"
-             href="../index.html">
-            /
-          </a> 
-          <a class="nagee f5 f4-ns dib mr3"
-             href="https://twitter.com/isthisnagee" target="_blank">
-            @isthisnagee
-          </a>
-          <a class="nagee f5 f4-ns dib mr3"
-             href="https://github.com/isthisnagee" target="_blank">
-            github
-          </a>
-        </div>
-      </nav>
-      <p class="nagee measure">
-      <small>
-        Note that I usually do not write blog posts here, and most of these
-        will link to Medium or some other site.
-      </small>
-      </p>
-      <section class="mw7">
-        <h2 class="nagee ph3 ph0-l">Medium</h2>
-        <article class="pv4 bt bb b--black-10 ph2 ph0-l">
-          <div class="flex flex-column flex-row-ns">
-            <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-              <h1 class="f4 nagee mt0 lh-title">
-                <a
-                  href="https://medium.com/@isthisnagee/why-im-giving-up-live-latex-notes-3324f1b5a826"
-                  class="nagee dim">
-                  Why I'm Giving Up Live LaTeX Notes
-                  </a>
-              </h1>
-              <p class="f5 lh-copy nagee"><small>
-                Last year I took all my notes in
-                LaTeX. I ended up with a notes directory with beautiful pdfs, I
-                reached the pinnacle of note-taking: the ability to search through
-                all my notes and have them displayed how I want them to be
-                displayed. This came at a significant cost.
-              </small></p>
-            </div>
-          </div>
-          <p class="f6 lh-copy nagee mv0">By <span>isthisnagee</span></p>
-          <time class="f6 db nagee">July 23, 2016</time>
-        </article>
-      </section>
-      <section class="mw7">
-        <h2 class="nagee ph3 ph0-l">Course Notes</h2>
-        <article class="pv4 bt bb b--black-10 ph2 ph0-l">
-          <div class="flex flex-column flex-row-ns">
-            <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-              <h1 class="f4 nagee mt0 lh-title">
-                <a
-                  href="https://isthisnagee.github.io/CSC428/"
-                  class="nagee dim">
-                  CSC428: Human Computer Interaction
-                  </a>
-              </h1>
-              <p class="f5 lh-copy nagee"><small>
-                My notes for CSC428. 
-              </small></p>
-            </div>
-          </div>
-          <p class="f6 lh-copy nagee mv0">By <span>isthisnagee</span></p>
-          <time class="f6 db nagee">Current</time>
-        </article>
-        <article class="pv4 bt bb b--black-10 ph2 ph0-l">
-          <div class="flex flex-column flex-row-ns">
-            <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-              <h1 class="f4 nagee mt0 lh-title">
-                <a
-                  href="https://isthisnagee.github.io/CSC373/"
-                  class="nagee dim">
-                  CSC373: Algorithm Analysis, Design, and Complexity
-                  </a>
-              </h1>
-              <p class="f5 lh-copy nagee"><small>
-                My notes for CSC373 with Prof Denis Pankratov, Winter 2017. These
-                notes are relatively sparse, and cover subjects related to Divide
-                and Conquer techniques, up to the study of NP Completeness.
-              </small></p>
-            </div>
-          </div>
-          <p class="f6 lh-copy nagee mv0">By <span>isthisnagee</span></p>
-          <time class="f6 db nagee">May 03, 2017</time>
-        </article>
-      </section>
+  <div class="flex-container">
+    <div class="block general">
+      <h1 class="page-title">isthisblog</h1>
+      <div class="intro">
+        <p>
+          yes. this is my blog. i occasionally write things.
+        </p>
+        <p>
+          <a class="at-link" href="https://medium.com/@isthisnagee">medium</a>, writting articles that I
+          put thought into.
+        </p>
+        <p>
+          <a class="at-link" href="#isthisblog">isthisblog</a>, rambling.
+        </p>
+      </div>
     </div>
-    <script src="../src/js/jquery.min.js"></script>
-    <script src="../src/js/action.js"></script>
-    <script src="../src/js/colors.js"></script>
-  </body>
+    <div class="block nav">
+      <a href="../index.html" class="up-arrow" id="home">home</a>
+      <a href="#" class="up-arrow" id="projects">medium</a>
+      <a href="#" class="up-arrow" id="twitter">twitter</a>
+      <a href="#" class="up-arrow" id="github">github</a>
+    </div>
+    <div class="block content"></div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
 </html>

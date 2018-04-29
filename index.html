@@ -1,69 +1,53 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>isthisnagee</title>
-    <link rel="stylesheet" href="src/css/tachyons.css" type="text/css" media="screen" charset="utf-8">
-    <link rel="shortcut icon" href="src/favicon.ico" />
-  </head>
-  <body class="courier bg--nagee">
-    <div class="pl3">
-      <header>
-        <h1 class="nagee">
-          isthisnagee /
-        </h1>
-        <div class="overflow-x-s pb3">
-          <div class="color-list"></div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="TODO">
+  <meta name="author" content="TODO">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="flex-container">
+    <div class="block general">
+      <h1 class="page-title">isthisnagee</h1>
+      <div class="intro">
+        <p>
+          yes. this is nagee. ben at starbucks. software developer.
+        </p>
+        <p>
+          <a class="at-link" href="https://www.intuit.com/">intuit</a>, making professional accountant software a delight to use.
+        </p>
+        <p>
+          <a class="at-link" href="https://utoronto.ca">uoft</a>, final semester of cs and math.
+        </p>
+      </div>
+      <div class="music">
+        <div id="loading">
+          <div class="music-block logo">
+            <div class="yellow"></div>
+            <div class="skyblue"></div>
+            <div class="pink"></div>
+          </div>
         </div>
-      </header>
-      <nav>
-        <div class="nowrap overflow-x-auto">
-          <a class="nagee f5 f4-ns dib mr3"
-             href="./resume/resume.html">
-            /resume
-          </a> 
-          <a class="nagee f5 f4-ns dib mr3"
-             href="./blog/blog.html">
-            /blog
-          </a> 
-          <a class="nagee f5 f4-ns dib mr3"
-             href="https://twitter.com/isthisnagee" target="_blank">
-            @isthisnagee
-          </a>
-          <a class="nagee f5 f4-ns dib mr3"
-             href="https://github.com/isthisnagee" target="_blank">
-            github
-          </a>
-        </div>
-      </nav>
-      <p class="nagee">
-      Yes, this is Nagee. Ben at Starbucks. Software Developer.
-      </p>
-      <p class="nagee">
-      Making professional accountant software a delight to use 
-      <a href="https://twitter.com/intuit" class="nagee">@intuit</a>.
-      </p>
-      <p class="nagee">
-        CS and Math <a href="https://twitter.com/uoft" class="nagee">@UofT</a>.
-      </p>
-      <p class="nagee">
-      <a href="mailto:isthisnagee@gmail.com?Subject=Hello!" class="nagee">isthisnagee@gmail.com</a>
-      </p>
-      <p class="nagee">
-      <a class="nagee" href="https://isthisnagee.github.io/dum-stuff-for-fun">dumb-stuff-4-fun</a>
-      </p>
-      <p class="nagee">
-      :wq
-      </p>
+      </div>
     </div>
-    <div id="msc">
-    <div class="pl3 w-50-ns" id="music">
+    <div class="block nav">
+      <a class="up-arrow" href="./blog/blog.html" id="blog">blog</a>
+      <a class="up-arrow" href="https://isthisnagee.github.io/dum-stuff-for-fun" id="projects">projects</a>
+      <a class="up-arrow" href="https://twitter.com/isthisnagee" id="twitter">twitter</a>
+      <a class="up-arrow" href="https://github.com/isthisnagee" id="github">github</a>
+      <a class="up-arrow" href="./resume/resume.pdf" id="github">resume</a>
+      <a class="up-arrow" href="mailto:isthisnagee@gmail.com">email</a>
     </div>
-    <button class="mv2 mh2 nagee bg--nagee dn" id="more-or-less">more ...</button>
-    </div>
-    <script src="src/js/jquery.min.js"></script>
-    <script src="src/js/action.js"></script>
-    <script src="src/js/colors.js"></script>
-  </body>
+  </div>
+  <script src="js/index.js"></script>
+</body>
 </html>
