@@ -46,8 +46,8 @@ a { color: blue; }
   padding-bottom: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly; align-items: center;
 }
 
 .nav a, .nav [role="button"] {
